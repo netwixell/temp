@@ -1,0 +1,192 @@
+.page // html
+  box-sizing: border-box
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  -ms-overflow-style: scrollbar
+  -ms-text-size-adjust: 100%
+  min-width: 320px
+  min-height: 100%
+
+  &__wrapper
+    min-height: 100vh
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin: 0 auto
+
+    // overflow-x: hidden
+
+  &__content
+    flex: auto
+
+  &--no-scroll
+    position: fixed
+
+    overflow: hidden
+
+  &--index
+
+    .commercial
+      +mg-section()
+
+  &--throwback
+    color: #fff
+
+    background-color: #000
+
+    .header
+
+      // модификатор, который делает подложку полупрозрачной
+      &--substrate
+        background-color: rgba(#000, .95)
+
+  &--dream-team
+
+    .menu__line
+      fill: $dt
+
+    .commercial
+      +pd-section(top)
+      +pd-section()
+
+      background-color: #fff
+
+    section,
+    footer
+      // z-index: 1
+      position: relative
+
+      background-color: #fff
+
+    .footer
+
+      +bp-min(768)
+        // z-index: -1
+
+        padding-top: 145px
+
+  &--news
+
+    .commercial
+
+      .container
+
+        +bp-min(1024)
+          +pd(0)
+
+  &--article
+
+    .footer
+      position: relative
+
+      +pd-section(top)
+
+      background-color: #fff
+
+  &--recreation
+
+    .footer
+      z-index: 3
+
+      background-color: #000623
+
+  &--vote
+
+    .menu__line
+      fill: $dt
+
+    .to-top
+      background-image: $gradient--dream-team
+      box-shadow: 0 5px 10px rgba($dt, .65)
+
+      &:active
+        box-shadow: 0 2px 4px rgba($dt, .65)
+
+    .commercial
+      margin-top: 80px
+      +mg-bottom(80px)
+
+    .team-table
+
+      +bp-min(1200)
+        cursor: default
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+*
+  -webkit-tap-highlight-color: transparent
+
+body
+  display: flex
+  flex-direction: column
+  // background-color: #fff
+  margin: 0
+  min-height: 100%
+
+  -webkit-font-smoothing: antialiased // (?)
+
+  opacity: 1
+  overflow-x: hidden
+
+  -webkit-overflow-scrolling: touch
+
+a,
+button,
+[role="button"],
+input,
+label,
+select,
+textarea
+  touch-action: manipulation // Стилевая коррекция 300ms задержки (для поддерживающих браузеров)
+  margin: 0                  // Убираем margin в Firefox и Safari
+
+
+button,
+input
+  overflow: visible    // Покажем торчащее в Edge
+  text-transform: none // Уберём наследование text transform в Firefox
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner
+  padding: 0
+  border-style: none
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"]
+  -webkit-appearance: listbox // Коррекция для Mobile Safari (https://github.com/twbs/bootstrap/issues/11266)
+
+
+textarea
+  overflow: auto   // Удаление верт. скролла в IE.
+  resize: vertical // Правильное изменение размеров
+
+textarea,
+input[type="text"],
+input[type="tel"],
+input[type="email"]
+  -webkit-appearance: none // Убирает внутреннюю тень в Safari
+
+img
+  max-width: 100%
+  height: auto
+
+ol,
+ul
+  list-style-type: none
+
+blockquote
+  padding: 0
+  margin: 0
+
+a
+  background-color: transparent
+
+i
+  color: $text-color--inactive

@@ -1,0 +1,15 @@
+- var file= "src/web-site/privacy/privacy.json";
+- var privacy= JSON.parse(fs.readFileSync(file));
+
+section.privacy
+  .container.privacy__container
+    each block in privacy
+      h1.privacy__title= block.title
+
+      p.privacy__text= block.p1
+      p.privacy__text= block.p2
+      p.privacy__text= block.p3
+      p.privacy__text= block.p4
+      p.privacy__text= block.p5
+      p.privacy__text= block.p6
+      p.privacy__text= block.p7

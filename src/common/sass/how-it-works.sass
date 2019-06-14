@@ -1,0 +1,131 @@
+.how-it-works
+  +pd-section(bottom)
+
+  line-height: 1.15
+
+  &__list
+    max-width: 800px
+    display: grid
+    justify-items: center
+    grid-row-gap: 40px
+    +mg(auto)
+
+    +bp-min(768)
+      grid-template-columns: repeat(10, 1fr)
+      justify-items: start
+      grid-row-gap: 0
+
+  &__title-wrapper
+    +divider--center(50%, 0)
+    text-align: center
+
+    +bp-min(768)
+      grid-column: 1 / span 5
+      grid-row: 1
+
+      text-align: left
+
+  &__title
+    +mg-bottom(20px)
+
+    +text-gradient($gradient--dream-team)
+
+  &__item
+    position: relative
+
+    max-width: 300px
+    width: 100%
+    display: flex
+
+    background-size: contain
+    background-repeat: no-repeat
+
+    counter-increment: steps
+
+    &::before
+      content: counter(steps)
+
+      margin-right: 10px
+
+      font-size: 54px
+      font-weight: 700
+      line-height: 0.8
+      color: $dt
+
+    // Первый шаг
+    &:nth-child(2)
+
+      +bp-min(768)
+        grid-row: 1 / span 3
+
+    // Второй шаг
+    &:nth-child(3)
+
+      +bp-min(768)
+        grid-row: 3 / span 3
+        align-self: end
+
+    // Третий шаг
+    &:nth-child(4)
+
+      +bp-min(768)
+        grid-row: 5 / span 3
+        align-self: end
+
+    // Четвёртый шаг
+    &:nth-child(5)
+
+      +bp-min(768)
+        grid-row: 7 / span 3
+        align-self: end
+
+    // Пятый шаг
+    &:nth-child(6)
+
+      +bp-min(768)
+        grid-row: 9 / span 3
+        align-self: end
+
+    &:nth-child(even)
+
+      +bp-min(768)
+        justify-self: end
+
+    +bp-min(768)
+      grid-column: 1 / -1
+
+    &--I
+      padding-top: 15px + 223px
+
+      &.lazyloaded
+        +bgi("../img/how-it-works/1_380.png", "../img/how-it-works/1_760.png")
+
+    &--II
+      padding-top: 15px + 200px
+
+      &.lazyloaded
+        +bgi("../img/how-it-works/2_380.png", "../img/how-it-works/2_760.png")
+
+    &--III
+      padding-top: 15px + 210px
+
+      &.lazyloaded
+        +bgi("../img/how-it-works/3_380.png", "../img/how-it-works/3_760.png")
+
+    &--IV
+      padding-top: 15px + 198px
+
+      &.lazyloaded
+        +bgi("../img/how-it-works/4_380.png", "../img/how-it-works/4_760.png")
+
+    &--V
+      padding-top: 15px + 211px
+
+      &.lazyloaded
+        +bgi("../img/how-it-works/5_380.png", "../img/how-it-works/5_760.png")
+
+  &__text
+    font-size: 18px
+    font-weight: 700
+
+    +text-gradient($gradient--dream-team)

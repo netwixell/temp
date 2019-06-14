@@ -1,0 +1,410 @@
+// Примеси проекта
+// Здесь лежат миксины для текущего проекта
+
+=trs($prop: all, $time: .25s, $easing: ease-out)
+  transition: $prop $time $easing
+
+// Для двух стандартных анимаций
+$time-default: .25s
+$easing-default: ease-out
+
+=trs-default($prop: all, $prop2: null)
+  @if $prop2
+    transition: $prop $time-default $easing-default, $prop2 $time-default $easing-default
+  @else
+    transition: $prop $time-default $easing-default
+
+// выход за рамки
+=break-out()
+  position: relative
+  left: 50%
+  right: 50%
+
+  width: 100vw
+  margin-left: -50vw
+  margin-right: -50vw
+
+=break-in()
+  position: static
+  left: auto
+  right: auto
+
+  width: auto
+  margin-left: 0
+  margin-right: 0
+
+=break-out--before($color: $bg-color--light)
+  position: relative
+
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 50%
+    right: 50%
+    z-index: -1
+
+    width: 100vw
+    height: 100%
+    margin-left: -50vw
+    margin-right: -50vw
+
+    background-color: $color
+
+=break-in--before($color: $bg-color--light)
+  background-color: $color
+
+  &::before
+    display: none
+
+=break-out-gradient--before($color: $gradient--dream-team)
+  position: relative
+
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 50%
+    right: 50%
+    z-index: -1
+
+    width: 100vw
+    height: 100%
+    margin-left: -50vw
+    margin-right: -50vw
+
+    background-image: $color
+
+=break-in-gradient--before($color: $gradient--dream-team)
+  position: relative
+
+  background-image: $color
+
+  &::before
+    content: ""
+    position: absolute
+    top: auto
+    left: auto
+    right: auto
+    z-index: -1
+
+    width: auto
+    height: auto
+    margin-left: 0
+    margin-right: 0
+
+    background-image: none
+
+
+=link($color: $link-color, $color--hover: $link-color--hover, $color--visited: $link-color--visited)
+  color: $color
+
+  // border-bottom: 1px solid rgba($link-color, .3)
+
+  transition: color .25s ease-out
+
+  &:hover,
+  &:focus,
+  &:active
+    color: $color--hover
+
+    // border-bottom-color: rgba($link-color, 1)
+
+    transition-duration: 0s
+
+  &:visited
+    color: $color--visited
+
+// недоссылка
+=link-d($color: $link-color, $color--hover: $color)
+  color: $color
+  letter-spacing: .0357143em
+  font-weight: 600
+  text-decoration: none
+
+  border-bottom: 1px dashed rgba($color, .5)
+
+  transition: border-bottom-color .25s ease-out
+
+  &:hover,
+  &:focus,
+  &:active
+    color: $color--hover
+
+    border-bottom-color: rgba($color--hover, 1)
+
+    transition-duration: 0s
+
+  // &:visited
+  //   color: $link-color--visited
+
+// ссылка-подсказка
+=link-q
+  color: $link-color
+  letter-spacing: .0357143em
+  font-weight: 600
+  text-decoration: none
+
+  border-bottom: 1px dotted rgba($link-color, .5)
+
+  transition: border-bottom-color .25s ease-out
+
+  cursor: help
+
+  &:hover,
+  &:focus,
+  &:active
+    color: $link-color--hover
+
+    border-bottom-color: rgba($link-color, 1)
+
+    transition-duration: 0s
+
+  &:visited
+    color: $link-color--visited
+
+=mg-section()
+  margin-bottom: 80px
+
+  @media screen and (min-width: 768px)
+    margin-bottom: 100px
+
+=pd-section($direction:bottom, $num: 80px, $numDesktop: 100px)
+  padding-#{$direction}: $num
+
+  @media screen and (min-width: 768px)
+    padding-#{$direction}: $numDesktop
+
+=mg-bottom($margin-bottom)
+  &:not(:last-child)
+    margin-bottom: $margin-bottom
+
+=mg-right($margin-right)
+  &:not(:last-child)
+    margin-right: $margin-right
+
+=size($width, $height: $width)
+  @if $height
+    width: $width
+    height: $height
+  @else
+    height: $width
+
+=pd($padding-left, $padding-right: $padding-left)
+  @if $padding-right
+    padding-left: $padding-left
+    padding-right: $padding-right
+  @else
+    padding-right: $padding-left
+
+=mg($margin-left, $margin-right: $margin-left)
+  @if $margin-right
+    margin-left: $margin-left
+    margin-right: $margin-right
+  @else
+    margin-right: $margin-left
+
+=text-gradient($color: $gradient)
+  background-image: $color
+  -webkit-text-fill-color: transparent
+  -webkit-background-clip: text
+
+// Первая версия страницы «Как это было»
+=text-gradient--grey()
+  background-image: linear-gradient(#fff, #828282)
+  -webkit-text-fill-color: transparent
+  -webkit-background-clip: text
+
+=link-inline
+  -webkit-text-fill-color: $link-color
+
+  // border-bottom: 1px solid rgba($link-color, .3)
+
+  transition: color .25s ease-out
+
+  &:hover,
+  &:focus,
+  &:active
+    -webkit-text-fill-color: $link-color--hover
+
+    // border-bottom-color: rgba($link-color, 1)
+
+    transition-duration: 0s
+
+  &:visited
+    -webkit-text-fill-color: $link-color--visited
+
+=unbutton()
+  padding-left: 0
+  padding-right: 0
+
+  background-color: transparent
+  border: 0
+
+  cursor: pointer
+
+=unlink()
+  text-decoration: none
+
+=unfont()
+  font-size: 0
+  letter-spacing: -.5em
+  text-decoration: none
+
+=img($w, $h, $bg: linear-gradient(#828282, rgba(#828282, .5)), $bc: rgba(0, 0, 0, .9), $mbm: soft-light)
+  position: relative
+
+  display: block
+  padding-bottom: $h / $w * 100%
+
+  background-image: $bg
+
+  & > img
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 2
+
+    width: 100%
+    height: 100%
+
+    object-fit: cover
+
+  &.loading
+
+    &::before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      z-index: 1
+
+      width: 32px
+      height: 32px
+      margin-top: -16px
+      margin-left: -16px
+
+      border-radius: 32px
+
+      animation: scaleout 1.2s infinite ease-in-out
+
+      // Tweak as needed
+      mix-blend-mode: $mbm
+      background-color: $bc
+
+// Блоки «Как было»
+=img--block($bg: linear-gradient(#828282, rgba(#828282, .5)))
+  position: relative
+
+  background-image: $bg
+
+  & > img
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 2
+
+    width: 100%
+    height: 100%
+
+    object-fit: cover
+
+  &.loading
+
+    &::after
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      z-index: 1
+
+      width: 32px
+      height: 32px
+      margin-top: -16px
+      margin-left: -16px
+
+      border-radius: 32px
+
+      animation: scaleout 1.2s infinite ease-in-out
+
+      // Tweak as needed
+      mix-blend-mode: soft-light
+      background-color: rgba(0, 0, 0, .9)
+
+=img--size($w: auto, $h: auto)
+  position: relative // нужно для позиционирования в блоке
+  width: $w
+  height: $h
+
+  background-image: linear-gradient(rgb(242, 242, 242) 66%, rgba(242, 242, 242, 0))
+
+  & > img
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 2
+
+    width: 100%
+    height: 100%
+
+    object-fit: cover
+
+=bgi($image, $retina-image: $image)
+  background-image: url($image)
+
+  @media (min-resolution: 192dpi)
+    background-image: url($retina-image)
+
+=bp-minmax($min-width, $max-width)
+  @media only screen and (min-width: $min-width#{px}) and (max-width: $max-width#{px})
+    @content
+
+=divider()
+
+  &::before
+    content: ""
+
+    display: block
+    width: 100px
+    height: 5px
+
+    background-image: $gradient--dream-team
+
+    @media screen and (min-width: 768px)
+      width: 200px
+
+=divider--center($sm: 50%, $md: 50%)
+  position: relative
+
+  &::before
+    content: ""
+    position: absolute
+    top: -5px
+    left: $sm
+    transform: translateX(-$sm)
+
+    display: block
+    width: 100px
+    height: 5px
+
+    background-image: $gradient--dream-team
+
+    @media screen and (min-width: 768px)
+      left: $md
+      transform: translateX(-$md)
+
+      width: 200px
+
+// Бордер точками
+=dottedBorder($color: #8f8f8f, $orientation: horizontal, $position: top, $spacing: 5px, $size: 1px)
+  background-position: $position
+
+  @if $orientation == horizontal
+    background-image: linear-gradient(to right, $color $size/$spacing * 100%, rgba(255,255,255,0) 0%)
+    background-size: $spacing $size
+    background-repeat: repeat-x
+
+  @else
+    background-image: linear-gradient($color $size/$spacing * 100%, rgba(255,255,255,0) 0%)
+    background-size: $size $spacing
+    background-repeat: repeat-y

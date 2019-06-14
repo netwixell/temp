@@ -1,0 +1,99 @@
+.vote
+  // Отбивка от фикcированного хедера
+  padding-top: 60px + 40px
+  +mg-section()
+
+  &__wrapper
+
+    &--header
+      +divider()
+      max-width: 600px // по ширине 2 карточек
+      margin-bottom: 30px
+
+    &--leaderboard
+      margin-bottom: 50px
+
+  &__title
+    max-width: 300px // (?)
+    margin-bottom: 15px
+
+    +text-gradient($gradient--dream-team)
+
+  &__description
+    +mg-bottom(10px)
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    grid-gap: 50px 40px
+
+    +bp-max(695)
+      justify-items: center
+
+  // Состояние страницы, когда пользователь уже проголосовал
+  &--isVoted
+
+    .card--vote
+      overflow: visible
+
+    .card__button
+      position: relative
+
+      color: $text-color--inactive
+
+      border-top: 1px solid #e5e5e5
+      border-bottom: 1px solid #979797
+      background-image: linear-gradient(#e5e5e5, #979797), linear-gradient(#e5e5e5, #979797)
+
+      overflow: visible
+      cursor: default
+
+      &:hover,
+      &:focus,
+      &:active
+        color: $text-color--inactive
+
+        background-color: unset
+        outline: none
+
+      &::before
+        content: attr(data-tooltip)
+        position: absolute
+        top: -120%
+        left: 20%
+        z-index: -1
+
+        +flex-center()
+        width: 300px
+        min-height: 40px
+        height: auto
+        padding: .3rem
+
+        font-size: 12px
+        font-weight: normal
+        text-align: left
+
+        background-color: #fff
+        background-image: none
+        box-shadow: 2px 2px 10px rgba(#000, .25)
+        border-radius: 5px 5px 5px 5px
+        filter: opacity(0)
+        visibility: hidden
+
+        transition: unset
+
+        +bp-max(375)
+          width: 250px
+
+      &--tooltip
+        animation: shake .25s ease forwards
+
+        &:not([data-tooltip=""])::before
+          top: -100%
+          left: 10%
+          z-index: 1
+
+          filter: opacity(1)
+          visibility: visible
+
+          +trs()

@@ -1,0 +1,36 @@
+section.dt-promo
+  .dt-promo__container.container
+    .dt-promo__title-wrapper
+      h2.dt-promo__title-inner
+        span.dt-promo__description Главное событие Форума
+        span.dt-promo__title Dream Team
+      p.dt-promo__text Соревнование за звание лучшей команды года и призовой фонд 200 000 гривен
+
+    a.dt-promo__button.button.button--blue(href="/dream-team.html")
+      span Узнать больше
+
+    picture.dt-promo__img-wrapper.loading
+      //- webp images
+      //- landscape images
+      source(
+        type="image/webp"
+        media="(min-width: 480px)",
+        data-srcset="./img/dt-promo/dt-about_768.webp 768w, ./img/dt-promo/dt-about_960.webp 960w, ./img/dt-promo/dt-about_1440.webp 1440w, ./img/dt-promo/dt-about_2880.webp 2880w")
+      //- portrait images
+      source(
+        type="image/webp"
+        data-srcset="./img/dt-promo/dt-about_m_480.webp 320w, ./img/dt-promo/dt-about_m_768.webp 768w, ./img/dt-promo/dt-about_m_960.webp 960w")
+      //- jpeg images
+      //- landscape images
+      source(
+        type="image/jpeg"
+        media="(min-width: 480px)",
+        data-srcset="./img/dt-promo/dt-about_768.jpg 768w, ./img/dt-promo/dt-about_960.jpg 960w, ./img/dt-promo/dt-about_1440.jpg 1440w, ./img/dt-promo/dt-about_2880.jpg 2880w")
+      //- portrait images
+      source(
+        type="image/jpeg"
+        data-srcset="./img/dt-promo/dt-about_m_480.jpg 320w, ./img/dt-promo/dt-about_m_768.jpg 768w, ./img/dt-promo/dt-about_m_960.jpg 960w")
+      img.dt-promo__img.lazyload(
+        data-src="./img/dt-promo/dt-about_480.jpg",
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+        alt="Кубок Dream Team")

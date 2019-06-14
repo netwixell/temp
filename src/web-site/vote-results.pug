@@ -1,0 +1,17 @@
+extends ./layout/layout
+
+block variables
+  - var title = "<имя команды> — Molfar Beauty Forum"
+
+  - var description = "Результаты участия <имя команды> в конкурсе Dream Team"
+
+  - var ogImage = "/img/og-image.jpg"
+  - var ogImageSecure = "/img/og-image.jpg"
+  - var pageModifier = "page--vote-results"
+  - var current_url = "/vote-results.html"
+
+block content
+  include vote-results/vote-results
+
+block script
+  script(defer src="/js/vote-results.min.js")

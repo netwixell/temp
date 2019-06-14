@@ -1,0 +1,151 @@
+.rules
+  padding-top: 40px + 60
+  +mg-section()
+
+  color: #000
+
+  +bp-min(768)
+    padding-top: 50px + 60
+
+  &__container
+
+    +bp-min(1024)
+      display: grid
+      grid-template-columns: minmax(189px, 320px) 1fr
+      grid-column-gap: 4%
+      // align-items: start
+
+  &__title
+    grid-column: 1 / 3
+
+    &--h1
+      +mg-bottom(20px)
+
+      +bp-min(1024)
+        grid-column: 2 / 3
+
+        +mg-bottom(40px)
+
+    &--h2
+      +mg-bottom(20px)
+
+      font-size: 24px
+      font-weight: 400
+
+    &--h3
+      +mg-bottom(20px)
+
+      font-size: 18px
+      font-weight: 700
+
+    &--h4
+      +mg-bottom(15px)
+
+      font-size: 14px
+      font-weight: 900
+
+    &--b
+      display: inline-block
+
+      font-weight: 700
+
+  // Начиная с 1024 — боковая панель
+  &__contents
+    grid-column: 1 / 2
+    grid-row: 1 / span 20
+    margin-bottom: 60px
+
+    +break-out--before(#f9f9f9)
+
+    +bp-min(1024)
+
+      margin-bottom: 0
+
+      +break-in--before(#f9f9f9)
+
+      &::before
+        content: ""
+        left: -100vw
+        right: auto
+
+        display: block
+        +mg(0)
+
+      & > *
+        position: sticky
+        top: 60px + 40
+
+  &__wrapper
+    grid-column: 2 / 3
+    margin-left: 20px
+    +mg-bottom(120px)
+
+    > a
+      color: currentColor
+
+  &__inner
+    +mg-bottom(60px)
+
+    +bp-min(768)
+      display: grid
+      grid-template-columns: repeat(2, minmax(20em, 25em))
+      grid-column-gap: 5em
+      align-items: flex-start
+      // +mg-bottom(60px)
+
+  &__list
+    counter-reset: item-counter
+
+    +mg-bottom(50px)
+
+    &--grey
+      color: #4f4f4f
+
+  &__item-wrapper
+    max-width: 25em
+    +mg-bottom(20px) // 27?
+
+    &--order
+      counter-increment: item-counter
+
+      max-width: 50em
+      display: grid
+      grid-template-columns: 1em 1fr
+      grid-column-gap: 1em
+      margin-left: calc(-1em - 1em)
+
+      &::before
+        content: counter(item-counter) "."
+
+        color: #c4c4c4
+
+        text-align: right
+
+  &__item
+    +mg-bottom(5px)
+
+    &--title
+      +mg-bottom(17px)
+
+    &--italic
+      font-style: italic
+      color: $text-color--inactive
+
+    &--grey
+      color: #4f4f4f
+
+    &--margin
+      max-width: 50em
+      +mg-bottom(50px)
+
+    > a
+      color: inherit
+      font-weight: inherit
+
+  &__atention-wrapper
+    max-width: 50em
+    grid-column: 1 / 3
+    +mg-bottom(45px)
+
+    font-style: italic
+    color: $text-color--inactive

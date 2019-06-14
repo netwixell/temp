@@ -1,0 +1,21 @@
+.social
+  display: flex
+  justify-content: space-around
+  padding-top: 7px
+  padding-bottom: 8px
+
+  &__link-wrapper
+    display: block
+    flex: 1 0 auto
+
+    &:not(:last-child)
+      border-right: 1px solid $bg-color--inactive
+
+  &__link
+    +link()
+
+    display: block
+    padding-top: 10px - 7px
+    padding-bottom: 20px - 8px
+
+    text-align: center

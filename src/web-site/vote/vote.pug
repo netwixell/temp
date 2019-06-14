@@ -1,0 +1,104 @@
+mixin team(title, address)
+  li.team-list__item
+    table.team-list__team-table.team-table
+      tbody.team-table__body
+        tr.team-table__title
+          th= title
+        tr.team-table__address
+          td= address
+        tr.team-table__votes
+          td 20 000
+
+mixin card()
+  +b.LI.card--vote
+    +e.A.img-wrapper.loading(href="#")
+      +e.IMG.img.lazyload(
+        data-srcset="./img/lectors/svyshuk_290.jpg 300w, ./img/lectors/svyshuk_580.jpg 600w, ./img/lectors/svyshuk_870.jpg 900w",
+        data-src="./img/lectors/svyshuk_290.jpg",
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+        alt="GRABCHUK beauty room")
+    +e.H3.name GRABCHUK beauty room
+    +e.P.about Петропавловск-Камчатский, Россия
+    +e.wrapper
+      //- .card__button--tooltip — Состояние нажатой кнопки, когда пользователь уже проголосовал
+      +e.BUTTON.button.button--unfilled-blue(data-tooltip="Вы уже голосовали сегодня. Приходите завтра")
+        span Проголосовать
+      +e.B.score Набрано 10 521 голос
+
+mixin cardEndVote()
+  +b.LI.card--vote
+    +e.A.img-wrapper.loading(href="#")
+      +e.IMG.img.lazyload(
+        data-srcset="./img/lectors/svyshuk_290.jpg 300w, ./img/lectors/svyshuk_580.jpg 600w, ./img/lectors/svyshuk_870.jpg 900w",
+        data-src="./img/lectors/svyshuk_290.jpg",
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+        alt="GRABCHUK beauty room")
+    //- card__badge--gold — для чемпионов
+    +e.SPAN.badge Финалист
+    +e.H3.name GRABCHUK beauty room
+    +e.P.about Петропавловск-Камчатский, Россия
+    +e.wrapper--end-vote
+      +e.B.score Онлайн-голосоваие: 10 521 голос
+      +e.A.results(href="/vote-results.html")
+        span Судейское голосование: 105 баллов
+
+//- .vote--isVoted — Состояние секции, когда пользователь уже проголосовал
++b.SECTION.vote
+  +e.container.container
+
+    +e.HEADER.wrapper--header
+      +e.H1.title Выберите свою команду мечты
+      +e.P.description Проголосуйте за команду, которая завоевала вашу симпатию!
+      +e.P.description Две команды, набавшие наибольшее количество голосов, попадут в финальный этап соревнований, который пройдёт в Буковеле
+
+    +b.leaderboard.__wrapper--leaderboard
+      +e.BUTTON.button#leaderboardToggle
+        span Турнирная таблица
+
+      +e.wrapper--team-list#leaderboard(style="display: none;")
+        +e.inner--header
+          span Команда
+          span Голоса
+
+        +b.OL.team-list.__team-list
+          +team("GRABCHUK beauty room", "Киев, Украина")
+          +team("Команда «Авантюристы»", "Киев, Украина", "Лучшая причёска")
+          +team("Команда «A»", "Киев, Украина")
+          +team("Команда «С очень длинным названием. Напрягает всех уже с самого начала»", "Киев, Украина")
+          +team("Команда «A»", "Киев, Украина")
+          +team("Команда «A»", "Киев, Украина")
+          +team("Команда «A»", "Киев, Украина")
+          +team("Команда «A»", "Киев, Украина")
+          +team("Команда «A»", "Киев, Украина")
+          +team("Команда «A»", "Киев, Украина")
+          +team("Команда «A»", "Киев, Украина")
+          +team("Штраф-команда", "Киев, Украина")
+          +team("Команда «A»", "Киев, Украина")
+
+        +e.inner--image
+          +e.IMG.img(src="./img/lectors/svyshuk_580.jpg")
+
+    +e.wrapper(id="vote-team-list")
+
+    +e.wrapper
+      +e.UL.list
+        +cardEndVote()
+        +cardEndVote()
+        +cardEndVote()
+        +cardEndVote()
+        +cardEndVote()
+        +cardEndVote()
+        +cardEndVote()
+        +cardEndVote()
+
+      include ./../commercial/commercial
+
+      +e.UL.list
+        +cardEndVote()
+        +cardEndVote()
+        +cardEndVote()
+        +cardEndVote()
+        +cardEndVote()
+        +cardEndVote()
+        +cardEndVote()
+        +cardEndVote()

@@ -1,0 +1,134 @@
+.buying
+  margin-top: 20px + 60 // отбиваем хедер
+  margin-bottom: 25px
+
+  &__back
+    position: relative
+
+    display: block
+    margin-bottom: 40px
+
+    color: $text-color--inactive
+    font-style: italic
+    font-weight: 400
+    +unlink()
+
+    &::before
+      content: ""
+
+      display: inline-block
+      +size(8px, 13px)
+      margin-right: 14px
+
+      vertical-align: middle
+
+      background-image: url(../img/angle.svg)
+      background-repeat: no-repeat
+      // background-position: 0 50%
+      background-size: 8px 13px
+      transform: rotate(180deg)
+
+    &:hover,
+    &:focus
+      +trs()
+
+  &__steps
+    margin-bottom: 20px
+
+    +bp-min(768)
+      margin-bottom: 40px
+
+  &__wrapper
+
+    +bp-min(768)
+      display: flex
+      justify-content: center
+      align-items: flex-start
+
+  &__success
+    max-width: 360px
+    +mg(auto)
+    margin-bottom: 40px
+
+    text-align: center
+
+  &__message
+    display: block
+
+    font-size: 24px
+    font-weight: 700
+    line-height: 1.15
+
+    &:last-of-type
+      margin-bottom: 15px
+
+  &__description
+    font-size: 12px
+    font-style: italic
+    line-height: 1.15
+    color: $text-color--inactive
+
+    +mg-bottom(15px)
+
+  // Ваш билет
+  &__ticket
+    margin-bottom: 40px
+
+    +bp-min(768)
+      +mg(0, 80px)
+
+    .ticket__title
+      display: block
+      margin-bottom: 30px
+
+      font-size: 36px
+      font-weight: 700
+
+    .ticket__offers
+      display: block
+      margin-bottom: 0
+
+    .ticket__offer
+      font-size: 12px
+      font-weight: 400
+      color: $text-color--inactive
+      line-height: 1.15
+      text-align: left
+
+    tbody
+      position: relative
+
+      width: 95% // чтобы разместить точки как в макете
+      display: block
+      padding-bottom: 40px
+      +mg(auto)
+      margin-bottom: calc(50px - 15px)
+
+      background-image: url(../img/dot.svg)
+      background-repeat: repeat-x
+      background-position: 100% 100%
+      background-size: 15px 5px
+
+      &::before,
+      &::after
+        content: ""
+        position: absolute
+
+        +size(20px)
+
+        background: $bg-color--lightest
+        border-radius: 50%
+
+      // 13 — поля билета
+      // 10 — радиус круга
+      // 2.5% — половина от зазора в ширине обёртки
+      &::before
+        left: calc(-13px - 10px - 2.5%)
+        bottom: -7.5px
+
+      &::after
+        right: calc(-13px - 10px - 2.5%)
+        bottom: -7.5px
+
+    tfoot
+      display: block

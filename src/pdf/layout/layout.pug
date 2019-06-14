@@ -1,0 +1,106 @@
+include ../../common/pug/mixins
+block variables
+
+doctype html
+html.page(class= pageModifier, lang="ru")
+
+  head
+    meta(charset="utf-8")
+    title #{title}
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(name="description" content=description)
+
+    style.
+      html {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      .pdf {
+        font-size: 12px;
+        color: #4f4f4f;
+      }
+      .pdf__container {
+        max-width: 595px;
+        width: 100%;
+        padding-left: 4%;
+        padding-right: 4%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .pdf nav {
+        display: inline-block;
+      }
+      .pdf a {
+        display: block;
+        color: inherit;
+        font-weight: inherit;
+        text-decoration: none;
+      }
+      .pdf header {
+        padding-top: 30px;
+        margin-bottom: 65px;
+      }
+      .pdf ul {
+        float: right;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .pdf ul::after {
+        content: "";
+        clear: both;
+      }
+      .pdf li {
+        margin-bottom: 5px;
+      }
+      .pdf address {
+        font-style: inherit;
+      }
+      .pdf table {
+        color: inherit;
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+      }
+      .pdf table {
+        margin-bottom: 30px;
+      }
+      .pdf thead td {
+        font-size: 24px;
+      }
+      .pdf th {
+        padding-bottom: 5px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.15;
+        text-align: left;
+      }
+      .pdf td {
+        padding-bottom: 30px;
+        font-weight: 700;
+        line-height: 1.15;
+        color: #333;
+      }
+      .pdf p {
+        margin: 0;
+      }
+      .pdf p:first-of-type {
+        margin-bottom: 30px;
+      }
+
+      @media only screen and (min-width: 1024px) {
+        .container {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+
+  body
+    main.page__content
+      block content

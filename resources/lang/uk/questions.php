@@ -1,0 +1,20 @@
+<?php
+  return [
+    'title'=>'Залишилися питання?',
+    'description'=>'Зателефонуйте або напишіть нам',
+    'socials-title'=>'Хочете бути в курсі новин?',
+    'socials-description'=>'Підписуйтесь на нас в :facebook і :instagram',
+    'form_success'=>'Надіслано!',
+    'label_name'=>'Ім’я',
+    'placeholder_name'=>'Анастасія Реснічкіна',
+    'error_name'=>'Введіть ім’я',
+    'label_phone'=>'Телефон',
+    'placeholder_phone'=>'+380 (00) 000 00 00',
+    'error_phone'=>'Введіть телефон',
+    'label_email'=>'E-пошта',
+    'placeholder_email'=>'anastasia@mail.com',
+    'error_email'=>'Введіть e-пошту',
+    'label_question'=>'Ваше запитання',
+    'placeholder_question'=>'Я можу купити квитки всьому салону?',
+    'submit'=>'Надіслати',
+  ];

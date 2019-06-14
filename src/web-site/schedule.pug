@@ -1,0 +1,16 @@
+extends ./layout/layout
+
+block variables
+  - var title = "Программа Форума — Molfar Beauty Forum"
+  - var description = "Программа Molfar Beauty Forum"
+  - var ogImage = "/img/og-image.jpg"
+  - var ogImageSecure = "/img/og-image.jpg"
+  - var pageModifier = "page--schedule"
+  - var current_url = "/schedule.html"
+
+block content
+  include schedule/schedule
+  include questions/questions
+
+block script
+  script(defer src="/js/schedule.min.js")

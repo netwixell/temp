@@ -1,0 +1,18 @@
+extends ./layout-vote/layout-vote
+
+block variables
+  - var title = "Голосование — Molfar Beauty Forum"
+
+  - var description = "Отборочный этап конкурса Dream Team"
+
+  - var ogImage = "/img/og-image.jpg"
+  - var ogImageSecure = "/img/og-image.jpg"
+  - var pageModifier = "page--vote"
+  - var current_url = "/vote.html"
+
+block content
+  include photoswipe/photoswipe
+  include vote/vote
+
+block script
+  script(defer src="/js/vote.min.js")

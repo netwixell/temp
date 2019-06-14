@@ -1,0 +1,72 @@
+.questions
+  margin-bottom: calc(526px - 80px)
+
+  color: #fff
+
+  background-image: linear-gradient(180deg, #ff6644 0%, #c5001e 100%)
+
+  @supports (backdrop-filter: blur(4px)) or (--webkit-backdrop-filter: blur(4px))
+    backdrop-filter: blur(4px)
+    --webkit-backdrop-filter: blur(4px)
+
+  +bp-min(768)
+    display: flex
+    justify-content: center
+    margin-bottom: 145px
+
+  .form
+    right: calc(50% - 150px) // Ставим на центр
+
+    +bp-min(768)
+      top: 20px
+      right: -350px // 300 + 50
+
+  &__container
+    position: relative
+
+    padding-top: 40px
+    padding-bottom: 90px
+
+    +bp-min(768)
+      max-width: 350px
+      +mg(-350px, 0)
+
+  &__title-wrapper
+    margin-bottom: 20px
+
+  &__contacts
+    margin-bottom: 60px
+
+  &__contact
+    font-size: 18px
+    font-weight: 700
+    color: currentColor
+    line-height: 1.15
+
+    &[href*="tel"]
+      text-decoration: none
+
+  &__contact-wrapper
+
+    &:not(:last-child)
+      margin-bottom: 10px
+
+  &__socials
+    margin-bottom: 40px
+
+    +bp-min(768)
+      margin-bottom: 0
+
+  &__socials-title
+    display: block
+
+    font-size: 18px
+    font-weight: 700
+    line-height: 1.15
+
+  &__socials-link
+    color: currentColor
+
+  // модификатор для секции без формы
+  &--no-form
+    +mg-section()

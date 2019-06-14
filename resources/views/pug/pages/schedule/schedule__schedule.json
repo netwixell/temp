@@ -1,0 +1,817 @@
+{
+  "datetime": [
+    {
+      "title": "Воскресенье",
+      "date": "12.05",
+      "ISOdate": "2019-05-12",
+      "href": "I",
+      "class": "active",
+      "flow": [
+        {
+          "type": "no-title",
+          "content": [
+            {
+              "type": "",
+              "timeStart": "15:00",
+              "timeEnd": "17:00",
+              "title": "Заезд и раcселение",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "18:00",
+              "timeEnd": "18:30",
+              "title": "Официальное открытие",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "badge",
+              "timeStart": "19:00",
+              "timeEnd": "",
+              "title": "Карпатская вечеринка",
+              "text": "Дресс-код: национальная одежда",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": "дресс-код"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Понедельник",
+      "date": "13.05",
+      "ISOdate": "2019-05-13",
+      "href": "II",
+      "class": "",
+      "flow": [
+        {
+          "title": "Парикмахерство",
+          "href": "hairdressingII",
+          "content": [
+            {
+              "type": "",
+              "timeStart": "07:00",
+              "timeEnd": "10:00",
+              "title": "Завтраки",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "11:00",
+              "timeEnd": "14:00",
+              "title": "Cеминар от компании Hairgum",
+              "text": "",
+              "lector": "Богдан Рафальский, Илья Яловенко",
+              "img": "hairgum",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "14:00",
+              "timeEnd": "15:00",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "15:00",
+              "timeEnd": "18:00",
+              "title": "Будет объявлено позже",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "20:00",
+              "timeEnd": "",
+              "title": "Вечернее шоу от Voynova Style",
+              "text": "",
+              "lector": "",
+              "img": "voynova",
+              "class": "",
+              "badge": ""
+            }
+          ]
+        },
+        {
+          "title": "Маникюр",
+          "href": "manicureII",
+          "content": [
+            {
+              "type": "",
+              "timeStart": "07:00",
+              "timeEnd": "10:00",
+              "title": "Завтраки",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "11:00",
+              "timeEnd": "13:00",
+              "title": "Трендовые дизайны маникюра: весна-лето 2019",
+              "text": "",
+              "lector": "Виктория Матвеева",
+              "img": "adore",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "13:00",
+              "timeEnd": "13:30",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "13:30",
+              "timeEnd": "15:30",
+              "title": "Cеминар от Yuliya Stadnik Nail Academy",
+              "text": "",
+              "lector": "Юлия Стадник",
+              "img": "stadnik",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "15:30",
+              "timeEnd": "16:00",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "16:00",
+              "timeEnd": "18:00",
+              "title": "Cеминар от компании SNB",
+              "text": "",
+              "lector": "Команда технологов SNB Украина",
+              "img": "snb",
+              "class": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "20:00",
+              "timeEnd": "",
+              "title": "Вечернее шоу от Voynova Style",
+              "text": "",
+              "lector": "",
+              "img": "voynova",
+              "class": "",
+              "badge": ""
+            }
+          ]
+        },
+        {
+          "title": "Визаж",
+          "href": "visageII",
+          "content": [
+            {
+              "type": "",
+              "timeStart": "07:00",
+              "timeEnd": "10:00",
+              "title": "Завтраки",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "11:00",
+              "timeEnd": "13:00",
+              "title": "Cеминар от компании Elan",
+              "text": "",
+              "lector": "Анна Кравченко",
+              "img": "elan",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "13:00",
+              "timeEnd": "13:30",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "13:30",
+              "timeEnd": "15:30",
+              "title": "Аэрограф в макияже",
+              "text": "",
+              "lector": "Алёна Антонова",
+              "img": "apriori",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "15:30",
+              "timeEnd": "16:00",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "16:00",
+              "timeEnd": "18:00",
+              "title": "Текстурный макияж, применение различного инструментария и продуктов для получения креативных эффектов",
+              "text": "",
+              "lector": "Максим Гилёв",
+              "img": "maxim-gilyov",
+              "class": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "20:00",
+              "timeEnd": "",
+              "title": "Вечернее шоу от Voynova Style",
+              "text": "",
+              "lector": "",
+              "img": "voynova",
+              "class": "",
+              "badge": ""
+            }
+          ]
+        },
+        {
+          "title": "Менеджмент",
+          "href": "managementII",
+          "content": [
+            {
+              "type": "",
+              "timeStart": "07:00",
+              "timeEnd": "10:00",
+              "title": "Завтраки",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "11:00",
+              "timeEnd": "13:00",
+              "title": "Cеминар от компании Prof Cosmetic",
+              "text": "",
+              "lector": "Сергей Кормаков",
+              "img": "prof-cosmetic",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "13:00",
+              "timeEnd": "13:30",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "13:30",
+              "timeEnd": "15:30",
+              "title": "Будет объявлено позже",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "15:30",
+              "timeEnd": "16:00",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "16:00",
+              "timeEnd": "18:00",
+              "title": "Будет объявлено позже",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "20:00",
+              "timeEnd": "",
+              "title": "Вечернее шоу от Voynova Style",
+              "text": "",
+              "lector": "",
+              "img": "voynova",
+              "class": "",
+              "badge": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Вторник",
+      "date": "14.05",
+      "ISOdate": "2019-05-14",
+      "href": "III",
+      "class": "",
+      "flow": [
+        {
+          "title": "Dream Team",
+          "href": "dream-team",
+          "content": [
+            {
+              "type": "",
+              "timeStart": "8:00",
+              "timeEnd": "8:20",
+              "title": "Регистрация команд",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "8:30",
+              "timeEnd": "10:00",
+              "title": "Этап «Маникюр»",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "10:00",
+              "timeEnd": "11:00",
+              "title": "Оценка судей",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "11:00",
+              "timeEnd": "12:00",
+              "title": "Этап «Визаж»",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "12:00",
+              "timeEnd": "13:00",
+              "title": "Оценка судей",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "13:00",
+              "timeEnd": "14:00",
+              "title": "Этап «Причёска»",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "14:00",
+              "timeEnd": "14:30",
+              "title": "Оценка судей",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "14:30",
+              "timeEnd": "15:30",
+              "title": "Финальное дефиле",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "20:00",
+              "timeEnd": "",
+              "title": "Вечернее шоу",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Среда",
+      "date": "15.05",
+      "ISOdate": "2019-05-15",
+      "href": "IV",
+      "class": "",
+      "flow": [
+        {
+          "title": "Парикмахерство",
+          "href": "hairdressingIV",
+          "content": [
+            {
+              "type": "",
+              "timeStart": "07:00",
+              "timeEnd": "10:00",
+              "title": "Завтраки",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "11:00",
+              "timeEnd": "14:00",
+              "title": "Cеминар от компании C-lab",
+              "text": "",
+              "lector": "",
+              "img": "c-lab",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "14:00",
+              "timeEnd": "15:00",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "15:00",
+              "timeEnd": "18:00",
+              "title": "Cеминар от компании Lakme",
+              "text": "",
+              "lector": "",
+              "img": "lakme",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "20:00",
+              "timeEnd": "",
+              "title": "Награждение победителей Dream Team. Коктейльная вечеринка",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            }
+          ]
+        },
+        {
+          "title": "Маникюр",
+          "href": "manicureIV",
+          "content": [
+            {
+              "type": "",
+              "timeStart": "07:00",
+              "timeEnd": "10:00",
+              "title": "Завтраки",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "11:00",
+              "timeEnd": "13:00",
+              "title": "Семинар от школы Ксении Сакелари",
+              "text": "",
+              "lector": "Ксения Сакелари",
+              "img": "sakelari",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "13:00",
+              "timeEnd": "13:30",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "13:30",
+              "timeEnd": "15:30",
+              "title": "Подология. Принципы работы в подологической обработке стопы. Различия с эстетическим педикюром",
+              "text": "",
+              "lector": "Дитер Бауманн, Ирина Егорова",
+              "img": "egorova",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "15:30",
+              "timeEnd": "16:00",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "16:00",
+              "timeEnd": "18:00",
+              "title": "Китайская роспись гелями",
+              "text": "",
+              "lector": "Татьяна Соловьёва",
+              "img": "solo-art",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "20:00",
+              "timeEnd": "",
+              "title": "Награждение победителей Dream Team. Коктейльная вечеринка",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            }
+          ]
+        },
+        {
+          "title": "Визаж",
+          "href": "visageIV",
+          "content": [
+            {
+              "type": "",
+              "timeStart": "07:00",
+              "timeEnd": "10:00",
+              "title": "Завтраки",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "11:00",
+              "timeEnd": "13:00",
+              "title": "Семинар от Permanent Makeup Beauty Academy",
+              "text": "",
+              "lector": "Инга Кавальчинске",
+              "img": "pmu",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "13:00",
+              "timeEnd": "13:30",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "13:30",
+              "timeEnd": "15:30",
+              "title": "Семинар от школы визажа Максима Гилёва",
+              "text": "",
+              "lector": "Максим Гилёв",
+              "img": "maxim-gilyov",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "15:30",
+              "timeEnd": "16:00",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "16:00",
+              "timeEnd": "18:00",
+              "title": "Семинар от компании Elan",
+              "text": "",
+              "lector": "Анна Кравченко",
+              "img": "elan",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "20:00",
+              "timeEnd": "",
+              "title": "Награждение победителей Dream Team. Коктейльная вечеринка",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            }
+          ]
+        },
+        {
+          "title": "Менеджмент",
+          "href": "managementIV",
+          "content": [
+            {
+              "type": "",
+              "timeStart": "07:00",
+              "timeEnd": "10:00",
+              "title": "Завтраки",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "11:00",
+              "timeEnd": "13:00",
+              "title": "Cеминар от Елены Курчиной",
+              "text": "",
+              "lector": "Елена Курчина",
+              "img": "ruki-nozhnicy",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "13:00",
+              "timeEnd": "13:30",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "logo",
+              "timeStart": "13:30",
+              "timeEnd": "15:30",
+              "title": "Семинар от Ольги Колесник",
+              "text": "",
+              "lector": "Ольга Колесник",
+              "img": "ruki-nozhnicy",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "15:30",
+              "timeEnd": "16:00",
+              "title": "Перерыв",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "16:00",
+              "timeEnd": "18:00",
+              "title": "Будет объявлено позже",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": ""
+            },
+            {
+              "type": "",
+              "timeStart": "20:00",
+              "timeEnd": "",
+              "title": "Награждение победителей Dream Team. Коктейльная вечеринка",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Четверг",
+      "date": "16.05",
+      "ISOdate": "2019-05-16",
+      "href": "V",
+      "class": "",
+      "flow": [
+        {
+          "type": "no-title",
+          "content": [
+            {
+              "type": "",
+              "timeStart": "07:00",
+              "timeEnd": "10:00",
+              "title": "Завтраки",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            },
+            {
+              "type": "",
+              "timeStart": "12:00",
+              "timeEnd": "",
+              "title": "Выезд",
+              "text": "",
+              "lector": "",
+              "img": "",
+              "class": "",
+              "badge": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

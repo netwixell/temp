@@ -1,0 +1,19 @@
+header.header
+  .header__container.container
+    nav.header__nav
+      a.header__link.header__link--logo(href= (current_url=="/") ? false : "/") Главная
+        +icon('molfar')
+
+      ul.header__list.header__list--links
+        li.header__link-wrapper
+          a.header__link.header__link--mobile(href= (current_url=="/") ? false : "/") Главная
+        li.header__link-wrapper
+          a.header__link(href= (current_url=="/schedule.html") ? false : "/schedule.html") Программа
+        //- li.header__link-wrapper
+        //-   a.header__link(href= (current_url=="/throwback.html") ? false : "/throwback.html") Как было
+        li.header__link-wrapper
+          a.header__link(href= (current_url=="/dream-team.html") ? false : "/dream-team.html") Dream Team
+        //- li.header__link-wrapper
+        //-   a.header__link(href= (current_url=="/rules.html") ? false : "/rules.html") Правила
+        li.header__link-wrapper
+          a.header__link(href= (current_url=="/news.html") ? false : "/news.html") Новости

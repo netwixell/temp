@@ -1,0 +1,47 @@
+mixin picture(name, width, height, alt)
+  picture.activities__img-wrapper.loading(class="activities__img-wrapper--"+name+"")
+    //- webp images
+    source(
+      type="image/webp",
+      data-srcset="../img/recreation/"+name+"_360.webp 360w, ../img/recreation/"+name+"_720.webp 720w, ../img/recreation/"+name+"_1080.webp 1080w")
+
+    //- png images
+    source(
+      type="image/png",
+      data-srcset="../img/recreation/"+name+"_360.png")
+
+    if (alt)
+      img.activities__img.lazyload(
+        data-src="../img/recreation/"+name+"_360.png",
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+        width=width,
+        height=height,
+        alt=alt)
+
+    if (!alt)
+      img.activities__img.lazyload(
+        data-src="../img/recreation/"+name+"_360.png",
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+        width=width,
+        height=height)
+
+
+section.activities.activities--kitchen.activities-parallax
+  .container.activities__container
+
+    .activites__inner
+
+      .activities__wrapper.activities__wrapper--text.activities-parallax__layer(data-rellax-speed="-1")
+        h2.activities__title Отведайте разнообразной кухни
+        p.activities__description На территории Форума действуют рестораны гуцульской, итальянской и, конечно, украинской кухни. А так же стэйк-хаусы и лаундж-бары
+
+      .activities__wrapper.activities__wrapper--soup
+        +picture("basil", "89", "89")
+        +picture("soup", "295", "277", "Тыквенный суп")
+
+      .activities__wrapper.activities__wrapper--eggs
+        +picture("eggs", "280", "280", "Блюдо с яичницой")
+
+      .activities__wrapper.activities__wrapper--meat
+        +picture("meat", "220", "227", "Мясной суп")
+        +picture("leaves", "70", "82")

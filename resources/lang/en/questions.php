@@ -1,0 +1,20 @@
+<?php
+  return [
+    'title'=>'Any questions?',
+    'description'=>'Call or email us',
+    'socials-title'=>'Want to keep abreast of the news?',
+    'socials-description'=>'Follow us at :facebook and :instagram',
+    'form_success'=>'Sent!',
+    'label_name'=>'Name',
+    'placeholder_name'=>'Anastasia Resnichkina',
+    'error_name'=>'Enter your name',
+    'label_phone'=>'Phone',
+    'placeholder_phone'=>'+380 (00) 000 00 00',
+    'error_phone'=>'Enter your phone',
+    'label_email'=>'Email',
+    'placeholder_email'=>'anastasia@mail.com',
+    'error_email'=>'Enter your email',
+    'label_question'=>'Your question',
+    'placeholder_question'=>'Can I buy tickets for the whole salon?',
+    'submit'=>'Send',
+  ];

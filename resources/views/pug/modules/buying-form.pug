@@ -1,0 +1,38 @@
+form.form.form--buying(name="order")
+  p.form__line
+    label.form__label
+      | Имя и фамилия
+      input.form__input(type="text", placeholder="Анастасия Ресничкина", name="name", pattern="^[^\\w\\u0400-\\u04ff,]*(?:[\\w\\u0400-\\u04ff,]+(?:^|\\s|$)[^]*){2}$", data-invalid-msg="Введите имя и фамилию через пробел", required)
+      //- Здесь могла бы быть Ваша ошибка
+      //- span.form__mistake Текст ошибки
+  p.form__line
+    label.form__label
+      | Телефон
+      input.form__input#tel(type="tel", placeholder="+380 (00) 000 00 00", name="phone", data-invalid-msg="Введите телефон",required)
+      //- Здесь могла бы быть Ваша ошибка
+      //- span.form__mistake Текст ошибки
+  p.form__line
+    label.form__label
+      | Е-почта
+      input.form__input(type="email", placeholder="anastasia@mail.com", name="email", data-invalid-msg="Введите E-mail", required)
+      //- Здесь могла бы быть Ваша ошибка
+      //- span.form__mistake Текст ошибки
+  p.form__line
+    label.form__label
+      | Город
+      input.form__input(type="text", placeholder="Харьков", name="city", data-invalid-msg="Введите город", required)
+      //- Здесь могла бы быть Ваша ошибка
+      //- span.form__mistake Текст ошибки
+  p.form__line.form__line--promo
+    label.form__label.form__label--promo-text
+      | Промокод продавца (необязятельно)
+      input.form__input.form__input--promo-text(type="text", name="promocode[seller]" placeholder="Продавец")
+    label.form__label.form__label--promo-num
+      input.form__input.form__input--promo-num(oninput="this.value=this.value.slice(0,this.maxLength)",type="number", name="promocode[code]" maxlength="2", placeholder="00")
+  p.form__line
+    label.form__label
+      | Комментарий (необязательно)
+      textarea.form__textarea#textarea(rows="5", maxlength="65535", name="comment")
+
+  button.form__button.button.button--unfilled
+    span Оформить

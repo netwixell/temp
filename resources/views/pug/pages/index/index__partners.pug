@@ -1,0 +1,32 @@
+mixin partner(href, name, icon)
+  li.partners__item-wrapper
+    a.partners__item.loading(href=href, target="_blank", rel="noopener")= name
+      img.partners__img.lazyload(data-src="/img/partners/"+icon+".svg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", width="160", alt=name)
+
+section.partners
+  .partners__container.container
+    h2.partners__title Партнёры
+
+    ul.partners__list
+      +partner("http://www.adore-professional.com.ua/", "Adore", "adore")
+      +partner("https://apriori.od.ua/", "A Priori", "apriori")
+      +partner("https://c-lab.store/", "C-lab", "c-lab")
+      +partner("https://podolog.dp.ua/", "Ирина Егорова", "egorova")
+      +partner("https://elanofficial.com/", "Elan", "elan")
+      +partner("https://www.instagram.com/hairgum_crew_ua/", "Hairgum", "hairgum")
+      +partner("https://kravchenko-anna.com/", "Анна Кравченко", "kravchenko")
+      +partner("https://www.facebook.com/lakmeteamua/", "Lakme", "lakme")
+      +partner("https://www.instagram.com/maxim_gilyov/", "Максим Гилёв", "maxim-gilyov")
+      +partner("http://nouvelle.net.ua/", "Nouvelle", "nouvelle")
+      +partner("http://orising.com.ua/", "Orising", "orising")
+      +partner("", "Permanent Makeup Beauty Academy", "pmu")
+      +partner("http://profcosmetic.if.ua/", "ProfCosmetic", "prof-cosmetic")
+      +partner("https://ruki-nozhnitsi.com.ua/", "Руки-Ножницы", "ruki-nozhnicy")
+      +partner("http://sakelary.com/", "Учебный центр Ксении Сакелари", "sakelari")
+      +partner("http://snb.bg/", "SNB", "snb")
+      +partner("https://vk.com/club90949398", "Solo Art", "solo-art")
+      +partner("http://ysnailacademy.com/", "Yuliya Stadnik", "stadnik")
+      +partner("https://www.voynovastyle.com/", "Voynova Style", "voynova")
+
+    //- TODO: Сделать AJAX магию
+    //- button.partners__more Все партнёры (??)

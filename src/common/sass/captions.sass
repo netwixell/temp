@@ -1,0 +1,29 @@
+.captions
+  margin-bottom: 25px
+
+  &__container
+
+    +bp-min(768)
+      display: grid
+      grid-auto-flow: dense
+
+  // А остальные фотографии смотрите на нашем Драйве
+  &__advertising
+    margin-bottom: 20px
+
+    font-weight: 900
+    text-align: center
+    color: #fff
+
+    +bp-min(768)
+      br
+        display: none
+
+  &__link
+    +mg(auto)
+
+figure + blockquote
+  margin-bottom: 85px
+
+  +bp-min(768)
+    margin-bottom: 75px

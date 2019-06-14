@@ -1,0 +1,36 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+     #   Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Redirects old links
+
+Redirect /contest.html https://molfarforum.com
+Redirect /vote.html https://molfarforum.com
+Redirect /rules.html https://molfarforum.com
+Redirect /ru/index.html https://molfarforum.com
+Redirect /en/index.html https://molfarforum.com
+Redirect /ru/contest.html https://molfarforum.com
+Redirect /ru/vote.html https://molfarforum.com
+Redirect /ru/rules.html https://molfarforum.com
+Redirect /en/contest.html https://molfarforum.com
+Redirect /en/vote.html https://molfarforum.com
+Redirect /en/rules.html https://molfarforum.com
+Redirect /index.html https://molfarforum.com

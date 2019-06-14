@@ -1,0 +1,43 @@
+.team-table
+  width: 100%
+
+  border-spacing: 0
+
+  &__body
+    display: grid
+    grid-template-columns: auto 1fr
+    grid-column-gap: 50px
+    align-items: center
+    align-content: flex-start
+
+  &__title
+    font-size: 16px
+    font-weight: normal
+
+    & > *
+      font-weight: inherit
+
+  &__photo
+    grid-row: 1 / 4
+    grid-column: 2
+    justify-self: end
+
+    a
+      +link-d($dt)
+
+  &__title
+    grid-column: 1
+
+  &__address
+    grid-column: 1
+
+  &__badge
+    order: -1
+
+    font-size: 10px
+    font-weight: 700
+    color: $dt
+    letter-spacing: .0357143em
+
+    &--winner
+      color: $dt--gold

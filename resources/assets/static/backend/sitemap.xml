@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://molfarforum.com/</loc>
+  <lastmod>2018-07-16T16:30:40+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://molfarforum.com/throwback</loc>
+  <lastmod>2018-07-16T16:30:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://molfarforum.com/schedule</loc>
+  <lastmod>2018-08-24T16:30:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://molfarforum.com/dream-team</loc>
+  <lastmod>2018-08-31T19:30:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://molfarforum.com/dream-team/rules</loc>
+  <lastmod>2018-08-31T19:30:40+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://molfarforum.com/news</loc>
+  <lastmod>2018-12-23T14:00:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://molfarforum.com/privacy</loc>
+  <lastmod>2018-12-23T14:00:40+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+
+</urlset>

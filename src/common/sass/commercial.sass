@@ -1,0 +1,55 @@
+.commercial
+
+  &__wrapper
+    display: grid
+    grid-template-columns: minmax(auto, 300px)
+    align-items: center
+    justify-content: center
+    padding-top: 20px
+    padding-bottom: 20px
+
+    border: 1px dotted $text-color--inactive
+
+    +bp-min(768)
+      grid-template-columns: minmax(auto, 150px) minmax(auto, 300px)
+      grid-column-gap: 50px
+      padding-top: 5px
+      padding-bottom: 5px
+
+  &__inner
+
+    &--text
+      display: flex
+      flex-direction: column
+      +mg-bottom(25px)
+
+      +bp-min(768)
+        order: 2
+        +mg-bottom(0)
+
+  &__text
+    +mg-bottom(10px)
+
+    font-size: 10px // (?)
+
+    &:last-child
+      align-self: flex-end
+      margin-top: 10px
+
+  &__title
+    font-size: 14px
+    font-weight: 900
+
+  &__link
+    font-size: 12px
+    +link()
+
+  // Картинка
+  &__img-wrapper
+    +img(1, 1)
+
+    &.image-loaded
+      background-image: unset
+
+  &__caption
+    color: $text-color--inactive

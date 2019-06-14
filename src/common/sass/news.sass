@@ -1,0 +1,66 @@
+.news
+  // 60px — Отбивка от фикcированного хедера
+  padding-top: 60px + 40
+  +mg-section()
+
+  &__wrapper
+    display: grid
+    grid-template-columns: minmax(auto, 600px)
+    justify-content: center
+
+  &__inner
+    display: grid
+    grid-template-columns: minmax(auto, 600px)
+    grid-gap: 60px
+
+    &--start
+      padding-top: 160px // (200 - 40)
+      padding-bottom: 100px // (?)
+
+      text-align: center
+      font-style: italic
+      color: $text-color--inactive
+
+    &--end
+      padding-top: 100px
+
+      text-align: center
+      font-style: italic
+      color: $text-color--inactive
+
+  &__title
+    position: relative
+
+    display: block // Если вдруг перестанет быть grid-элементом
+    padding-bottom: 10px
+    +mg-bottom(40px)
+
+    font-weight: 700
+
+    border-bottom: 1px solid #e0e0e0
+
+    +bp-min(768)
+      +mg-bottom(60px)
+
+  &__card
+    width: 100%
+    +pd(0)
+    padding-bottom: 0
+
+    .card__img-wrapper
+      +img(300, 200)
+
+      +mg-bottom(30px)
+
+      overflow: hidden
+
+  b,
+  strong
+    font-weight: 700
+
+  // Правки поведения виджета при загрузке
+  .fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span, .fb_iframe_widget_fluid_desktop iframe
+    max-width: none
+
+  .fb_iframe_widget
+    display: inline

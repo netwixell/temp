@@ -1,0 +1,84 @@
+.footer
+
+  &__container
+    padding-top: 30px
+    padding-bottom: 40px
+
+    +bp-min(768)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      justify-content: space-between
+      align-content: flex-start
+      grid-auto-flow: dense
+
+  &__wrapper
+    padding-bottom: 25px
+    margin-bottom: 25px
+
+    border-bottom: 1px solid rgba($text-color--placeholder, .25)
+
+    +bp-min(768)
+      padding-bottom: 0
+      margin-bottom: 0
+
+      border-bottom: 0
+
+  &__list
+
+    &--lang
+      display: flex
+      margin-bottom: 25px
+
+      +bp-min(768)
+        margin-bottom: 20px
+
+      .footer__link-wrapper
+
+        &:not(:last-child)
+          padding-right: 3px
+          margin-right: 3px
+
+          border-right: 1px solid $text-color--placeholder
+
+    &--lang
+      text-transform: uppercase
+
+  &__made-by
+    // width: 189px // Размер «Создано в Ивано-Франковске»
+    padding-bottom: calc(20px + 15px)
+
+    font-size: 0
+
+    // background-image: url(../img/made-in_ru.svg)
+    background-repeat: no-repeat
+    background-position: 0 100%
+
+    +bp-min(768)
+      width: 100%
+
+      justify-self: end
+      text-align: right
+
+      background-position: 100% 100%
+
+      overflow: visible
+
+  &__link
+    +unlink()
+    color: $text-color--placeholder
+    // font-weight: 400
+
+    &--lang
+
+      &:not([href])
+        color: $accent--throwback
+
+        cursor: default
+
+    &--svg
+      +unfont()
+
+  .icon-kontora
+    +size(77px, 15px)
+
+    fill: $bg-color--inactive

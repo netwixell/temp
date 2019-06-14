@@ -1,0 +1,20 @@
+extends layout/layout
+
+block variables
+  - var title = "Отдых — Molfar Beauty Forum"
+  - var description = "Отдохните на Molfar Forum. Нет, ну правда. Не всё же время учиться"
+  - var ogImage = "/img/og-image.jpg"
+  - var ogImageSecure = "/img/og-image.jpg"
+  - var pageModifier = "page--recreation"
+  - var current_url = "/recreation.html"
+
+block content
+  include recreation/recreation__hero
+  include recreation/recreation__extreme
+  include recreation/recreation__relax
+  include recreation/recreation__kitchen
+  include recreation/recreation__mountains
+  include recreation/recreation__party
+
+block script
+  script(defer src="/js/recreation.min.js")

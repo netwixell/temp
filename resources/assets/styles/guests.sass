@@ -1,0 +1,91 @@
+// Для кого Molfar Forum?
+.guests
+  +mg-section()
+
+  &__layer
+    position: absolute
+    top: 0
+    left: 0
+
+    width: 100%
+    height: 100%
+
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+
+    +bp-min(480)
+      background-size: contain
+
+  &__title-wrapper
+    position: relative
+
+    padding-top: 25px
+    padding-bottom: 30px
+    +mg(auto)
+
+    text-align: center
+
+    +bp-min(768)
+      padding-top: 70px
+      padding-bottom: 70px
+
+  &__title
+    position: relative
+
+    max-width: 600px
+    +mg(auto)
+    margin-bottom: 15px
+
+  &__description
+    position: relative
+
+    max-width: 600px
+    +mg(auto)
+
+  &__list
+    display: grid
+    // ширина карточки 260,
+    // но нужно по 3 в ряд на больших экранах
+    grid-template-columns: repeat(auto-fill, 300px)
+    grid-gap: 60px
+    justify-content: center
+
+    margin-bottom: 50px
+
+  &__card
+    justify-self: center
+    padding-top: 210px + 7 + 5 // 7 — поле сверху; 5 — снизу
+
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: 0 7px
+
+    &--hair.lazyloaded
+      +bgi("../img/guests/hair_320.png", "../img/guests/hair_640.png")
+
+    &--nails.lazyloaded
+      +bgi("../img/guests/nails_320.png", "../img/guests/nails_640.png")
+
+    &--visage.lazyloaded
+      padding-top: 210px + 7 + 5 + 5
+
+      +bgi("../img/guests/visage_320.png", "../img/guests/visage_640.png")
+
+    &--marketing.lazyloaded
+      padding-top: 180px + 7 + 5
+
+      +bgi("../img/guests/marketing_320.png", "../img/guests/marketing_640.png")
+
+    &--manager.lazyloaded
+      padding-top: 180px + 7 + 5 + 10
+
+      +bgi("../img/guests/manager_320.png", "../img/guests/manager_640.png")
+
+    &--vendor.lazyloaded
+      padding-top: 180px + 7 + 5 + 5
+
+      +bgi("../img/guests/vendor_320.png", "../img/guests/vendor_640.png")
+
+  &__button
+    +mg(auto)

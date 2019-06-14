@@ -1,0 +1,367 @@
+.caption
+  position: relative
+
+  max-width: 300px
+  width: 100%
+  +mg(auto)
+
+  &__title
+    position: absolute
+
+    max-width: 130px
+
+    font-style: italic
+    color: $text-color--inactive
+    line-height: 1.15
+
+  &__img-wrapper
+
+    &--120x180
+      +img--size(120px, 180px)
+
+    &--140x210
+      +img--size(140px, 210px)
+
+    &--140x93
+      +img--size(140px, 93px)
+
+    &--150x100
+      +img--size(150px, 100px)
+
+    &--160x107
+      +img--size(160px, 107px)
+
+    &--180x120
+      +img--size(180px, 120px)
+
+    &--200x133
+      +img--size(200px, 133px)
+
+    &--220x146
+      +img--size(220px, 146px)
+
+    &--229x146
+      +img--size(229px, 146px)
+
+    &--230x153
+      +img--size(230px, 153px)
+
+  &--barber
+    height: 193px + 146px
+    grid-column: 1
+
+    .caption__title
+      top: 10px
+      right: 0
+
+    .caption__img-wrapper
+
+      &--140x210
+        z-index: 3
+
+      &--180x120
+        top: -123px
+        left: 113px
+        z-index: 1
+
+      &--220x146
+        top: -146px
+        z-index: 2
+
+  &--nouvelle
+    height: 210px + 111px + 146px
+    grid-column: 1
+
+    .caption__title
+      top: 10px
+      left: 0
+
+    .caption__img-wrapper
+
+      &--140x210
+        left: 153px // 163?
+        z-index: 2
+
+      &--180x120
+        top: -123px // 120 + 3
+        z-index: 1
+
+      &--230x153
+        top: -153px
+        left: 37px
+        z-index: 3
+
+      &--220x146
+        top: -146px - 30
+        left: 73px // 68
+        z-index: 2
+
+  &--oskar
+    height: 408px + 10
+    grid-column: 2
+    grid-row: 3
+
+    .caption__title
+      top: 0
+      right: 0
+
+      max-width: 115px
+
+    .caption__img-wrapper
+
+      &--180x120
+        top: 21px
+        z-index: 1
+
+      &--140x210
+        top: -46px - 10
+        left: 153px
+        z-index: 3
+
+      &--140x93
+        top: -93px - 40 - 10
+        left: 18px
+        z-index: 1
+
+      &--220x146
+        top: -146px - 15
+        left: 73px // 68
+        z-index: 4
+
+  &--adore
+    height: 247px
+    grid-column: 1
+    margin-bottom: 55px // (!)
+
+    .caption__title
+      top: 146px + 20
+      left: 0
+
+      max-width: 105px
+
+    .caption__img-wrapper
+
+      &--220x146
+        z-index: 2
+
+      &--180x120
+        top: -18px
+        left: 113px
+        z-index: 1
+
+  &--elan
+    height: 420px
+    grid-column: 1
+
+    .caption__title
+      top: 52px
+      left: 0
+
+    .caption__img-wrapper
+
+      &--120x180
+        left: 163px
+        z-index: 1
+
+      &--230x153
+        top: -41px
+        z-index: 2
+
+      &--220x146
+        top: -41px - 18
+        left: 59px
+        z-index: 1
+
+  &--snb
+    height: 512px
+    grid-column: 2
+
+    .caption__title
+      top: 0
+      right: 0
+
+      max-width: 120px
+
+    .caption__img-wrapper
+
+      &--160x107
+        top: 23px
+        z-index: 1
+
+      &--180x120
+        top: -2px
+        left: 121px
+        z-index: 2
+
+      &--229x146
+        top: 15px
+        z-index: 1
+
+      &--220x146
+        top: -16px
+        left: 79px
+        z-index: 2
+
+  &--gama
+    height: 339px
+    grid-column: 1
+
+    .caption__title
+      top: 10px
+      right: 0
+
+    .caption__img-wrapper
+
+      &--120x180
+        top: 0
+        left: 0 // 7px
+        z-index: 2
+
+      &--180x120
+        top: -87px - 10
+        left: 121px
+        z-index: 1
+
+      &--220x146
+        top: -87px - 14px - 10
+        left: 0 // 7 px
+        z-index: 2
+
+  &--exhibition
+    height: 247px
+    grid-column: 2
+    margin-bottom: 74px // (!)
+
+    .caption__title
+      top: 166px
+
+    .caption__img-wrapper
+
+      &--220x146
+        z-index: 2
+
+      &--180x120
+        top: -19px
+        left: 121px
+        z-index: 1
+
+  &--lakme
+    height: 445px
+    grid-column: 1
+
+    .caption__title
+      top: 11px
+      right: 0
+
+    .caption__img-wrapper
+
+      &--120x180
+        left: 0 // 5px
+        z-index: 2
+
+      &--180x120
+        top: -87px
+        left: 121px
+        z-index: 1
+
+        &:last-child
+          top: -87px - 14 - 14 - 10
+
+      &--220x146
+        top: -87px - 14 - 10
+        z-index: 2
+
+  &--dream-team
+    height: 458px
+    grid-column: 2
+
+    .caption__title
+      top: 20px
+      right: 0
+
+    .caption__img-wrapper
+
+      &--180x120
+        top: -18px
+        left: 121px
+        z-index: 1
+
+      &--220x146
+        top: -14px - 14 - 10
+        z-index: 2
+
+        &:last-child
+          top: -14px - 14 - 21 - 10
+          left: 79px
+          z-index: 1
+
+  &--party
+    height: 478px
+    grid-column: 2
+
+    .caption__title
+      top: 30px
+      right: 0
+
+      max-width: 85px
+
+    .caption__img-wrapper
+
+      &--180x120
+        top: -18px - 10
+        left: 121px
+        z-index: 1
+
+      &--220x146
+        top: -14px - 14 - 10 - 10
+        z-index: 2
+
+        &:last-child
+          top: -14px - 14 - 21 - 10 - 10
+          left: 79px
+          z-index: 1
+
+  &--brandwall-right
+    grid-column: 2
+
+    &:not(:last-child)
+      margin-bottom: 74px
+
+    .caption__img-wrapper
+
+      &--220x146
+        left: 73px // 68
+
+  &--brandwall-left
+    grid-column: 2
+    grid-row: 2
+
+    &:not(:last-child)
+      margin-bottom: 74px
+
+    +bp-min(768)
+
+      .caption__img-wrapper
+
+        &--220x146
+          left: 73px // 68
+
+  &--coffee-break
+    height: 146px + 101
+    grid-column: 2
+    grid-row: 1
+    margin-bottom: 74px
+
+    .caption__title
+      top: 146px + 20px // 20 — отступ от фотографии
+      max-width: 100px
+
+    .caption__img-wrapper
+
+      &--220x146
+        z-index: 2
+
+      &--180x120
+        top: -19px
+        left: 113px
+        z-index: 1

@@ -1,0 +1,99 @@
+.quote
+  +mg-section
+  // position: relative
+
+  padding-top: 37px
+
+  font-size: 24px
+  font-weight: 700
+  line-height: 1.6 // в дизайне 1.15
+
+  background-color: $bg-color
+
+  &__container
+    position: relative
+
+    min-height: 230px - 37 // минус поле сверху
+
+    &--left-image
+
+      .quote__content
+        margin-left: auto
+
+      .quote__img-wrapper
+
+        +bp-min(768)
+          right: auto
+          left: 8%
+
+  &__content
+    z-index: 1
+    position: relative // чтобы быть выше картинки
+
+    +bp-min(768)
+      max-width: calc(100% - 300px - 8%)
+
+  &__text-wrapper
+    position: relative
+
+    &::before,
+    &::after
+      position: absolute
+
+      display: block
+
+      font-size: 96px
+      font-weight: 700
+      font-style: italic
+      line-height: 0
+      color: $bd-color
+
+    &::before
+      content: "«"
+      top: 0
+      left: 0
+
+    &::after
+      content: "»"
+      right: 0
+      bottom: 24px - 8 // подымаем на 2/3 размера шрифта
+
+  &__text
+    +text-gradient
+    position: relative // чтобы быть выше цитатных стрелок
+    z-index: 1 // тоже из-за стрелок
+
+    display: block
+    margin-bottom: 25px
+
+    text-align: center
+
+  &__author
+    display: block
+    padding-bottom: 16px
+
+    font-size: 18px
+    text-align: right
+    font-style: italic
+    line-height: 1.15
+
+  &__img-wrapper
+    display: none
+
+    +bp-min(768)
+      position: absolute
+      right: 8%
+      bottom: 0
+      overflow: hidden
+
+      display: block
+      +size(300px)
+
+  &__img
+    position: absolute
+    top: 0
+    left: 0
+
+    width: 100%
+
+    object-fit: cover

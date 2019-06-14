@@ -1,0 +1,71 @@
+section.buying
+  .container.buying__container
+    h1.buying__title.visually-hidden Приобретение билета
+    a.buying__back(href="/index.html#tickets")
+      span К выбору билетов
+
+    ol.steps.buying__steps
+      li.steps__step.steps__step--current
+        span Выберите #[br]билет
+      li.steps__step
+        span Заполните #[br]форму
+      li.steps__step
+        span Ожидайте #[br]звонка
+
+    ul.tabs(data-tabs).visually-hidden
+      li.tabs__link-wrapper
+        a.tabs__link.active(href="#ordering" data-tab)
+      li.tabs__link-wrapper
+        a.tabs__link(href="#success" data-tab)
+
+    .tabs.tabs--content(data-tabs-content)
+      .buying__wrapper.tabs-pane.active#ordering(data-tabs-pane)
+        table.ticket.buying__ticket
+          caption.ticket__title Ваш билет
+          tr.ticket__offers
+            th.ticket__offer Поток:
+          tr.ticket__options
+            td.ticket__option Парикхмахерство
+          tr.ticket__offers
+            th.ticket__offer Проживание:
+          tr.ticket__options
+            td.ticket__option Как повезёт
+          tfoot
+            tr.ticket__total
+              th.ticket__offer.ticket__offer--total К оплате:
+              td.ticket__price.ticket__price--final 7&#8201;500 ₴
+
+        include ../form-buying/form-buying
+
+      .buying__inner.tabs-pane#success(data-tabs-pane)
+        .buying__success
+          b.buying__message Спасибо за заказ
+          p.buying__description В течение 15 минут PDF-файл с номером заказа придёт к вам на почту. Остаётся только его оплатить и можно готовить чемоданы!
+
+        .buying__wrapper
+          table.ticket.buying__ticket
+            caption.ticket__title Ваш билет
+            tr.ticket__offers
+              th.ticket__offer Поток:
+            tr.ticket__options
+              td.ticket__option Парикхмахерство
+            tr.ticket__offers
+              th.ticket__offer Проживание:
+            tr.ticket__options
+              td.ticket__option Как повезёт
+            tfoot
+              tr.ticket__total
+                th.ticket__offer.ticket__offer--total К оплате:
+                td.ticket__price.ticket__price--final 7&#8201;500 ₴
+
+          .payment-details.buying__payment-details
+            b.payment-details__title Способы оплаты
+            p.payment-details__text Вы можете оплатить билет денежным переводом на карту ПриватБанка. В комментарии к платежу укажите номер заказа, который указан в вашем PDF-файле
+            b.payment-details__title.payment-details__title--secondary Реквизиты:
+            span.payment-details__text.payment-details__text--card-number 4149 4991 0434 7842
+            span.payment-details__text.payment-details__text--card-holder Сенькив Владимир
+            p.payment-details__text Либо вы можете оплатить билет наличными у представителя в вашем городе
+            b.payment-details__title.payment-details__title--text Наш менеджер свяжется с вами в ближайшее время
+            span.payment-details__text.payment-details__text--phone-number +380 (66) 558 31 07
+            span.payment-details__text.payment-details__text--phone-number +380 (98) 318 71 15
+            span.payment-details__text.payment-details__text--phone-holder Ирина

@@ -1,0 +1,15 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Политика конфиденциальности — Molfar Beauty Forum"
+  - var description = "Главная бьюти-конференция в Украине"
+  - var ogImage = "/img/og-image.jpg"
+  - var ogImageSecure = "/img/og-image.jpg"
+  - var pageModifier = "page--privacy"
+  - var current_url = "/privacy.html"
+
+block content
+  include privacy/privacy__privacy
+
+//- block script
+//-   script(defer src="/js/privacy.min.js")

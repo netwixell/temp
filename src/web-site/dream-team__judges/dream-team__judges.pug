@@ -1,0 +1,35 @@
+mixin judge(srcName, name, description)
+  li.card.card--judge.judges__card
+    .card__img-wrapper.loading
+      img.card__img.lazyload(
+        data-srcset="./img/lectors/"+srcName+"_290.jpg 300w, ./img/lectors/"+srcName+"_580.jpg 600w, ./img/lectors/"+srcName+"_870.jpg 900w",
+        data-src="./img/lectors/"+srcName+"_290.jpg",
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+        alt=name)
+    h3.card__name= name
+    p.card__about= description
+
+section.judges
+  .judges__container.container
+    .judges__title-wrapper
+      h2.judges__title Судьи
+      p.judges__description Судят на Dream Team профессиональные судьи и чемпионы международных соревнований
+      p.judges__promo Судьи проведут бесплатные консультации для первых зарегистрированных команд. Города проведения будут выбраны на основе регистраций
+      a.judges__button.judges__button--title.button.button--unfilled-blue(href="/rules.html")
+        span Правила конкурса
+
+    ul.judges__list
+      +judge("sakelary", "Ксения Сакелари", "Далеко-далеко за словесными горами")
+      +judge("sakelary", "Ксения Сакелари", "Далеко-далеко за словесными горами")
+      +judge("sakelary", "Ксения Сакелари", "Далеко-далеко за словесными горами")
+      +judge("sakelary", "Ксения Сакелари", "Далеко-далеко за словесными горами")
+      +judge("sakelary", "Ксения Сакелари", "Далеко-далеко за словесными горами")
+      +judge("sakelary", "Ксения Сакелари", "Далеко-далеко за словесными горами")
+      +judge("sakelary", "Ксения Сакелари", "Далеко-далеко за словесными горами")
+      +judge("sakelary", "Ксения Сакелари", "Далеко-далеко за словесными горами")
+
+    //- TODO: Сделать AJAX магию
+    //- button.judges__more Все судьи (??)
+
+    a.judges__button.button.button--unfilled-blue(href="/rules.html")
+      span Правила конкурса

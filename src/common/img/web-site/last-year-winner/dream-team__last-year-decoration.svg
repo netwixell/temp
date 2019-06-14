@@ -1,0 +1,13 @@
+<svg width="946" height="946" viewBox="0 0 946 946" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="946" height="946" fill="black" fill-opacity="0"/>
+<path d="M873 473C873 693.914 693.914 873 473 873C252.086 873 73 693.914 73 473C73 252.086 252.086 73 473 73C693.914 73 873 252.086 873 473Z" fill="#C4C4C4"/>
+<path d="M873 473C873 693.914 693.914 873 473 873C252.086 873 73 693.914 73 473C73 252.086 252.086 73 473 73C693.914 73 873 252.086 873 473Z" fill="url(#paint0_linear)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M473 907C712.692 907 907 712.692 907 473C907 233.308 712.692 39 473 39C233.308 39 39 233.308 39 473C39 712.692 233.308 907 473 907ZM473 910C714.348 910 910 714.348 910 473C910 231.652 714.348 36 473 36C231.652 36 36 231.652 36 473C36 714.348 231.652 910 473 910Z" fill="#5EAEF5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M473 944C733.126 944 944 733.126 944 473C944 212.874 733.126 2 473 2C212.874 2 2 212.874 2 473C2 733.126 212.874 944 473 944ZM473 946C734.231 946 946 734.231 946 473C946 211.769 734.231 0 473 0C211.769 0 0 211.769 0 473C0 734.231 211.769 946 473 946Z" fill="#5EAEF5" fill-opacity="0.5"/>
+<defs>
+<linearGradient id="paint0_linear" x1="427" y1="519" x2="873" y2="73" gradientUnits="userSpaceOnUse">
+<stop stop-color="#217CE8"/>
+<stop offset="1" stop-color="#8FD5FF"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,34 @@
+.flow
+  display: grid
+  // 290 — ширина карточки
+  grid-template-columns: repeat(auto-fill, 290px)
+  grid-gap: 30px 60px
+  justify-content: center
+
+  +bp-minmax(1024, 1100)
+    grid-gap: 30px 20px
+
+  &__list
+    grid-column: 1 / -1
+    grid-row-start: 2
+    display: grid
+    // 290 — ширина карточки
+    grid-template-columns: repeat(auto-fill, 290px)
+    grid-gap: 40px 60px
+    justify-content: center
+
+    +bp-minmax(1024, 1100)
+      grid-gap: 40px 20px
+
+  &__title
+    position: relative
+
+    grid-column: 1 / 2
+    display: block // Если вдруг перестанет быть grid-элементом
+    padding-bottom: 5px
+
+    font-size: 21px
+    font-weight: 700
+    color: $accent
+
+    border-bottom: 1px solid #e0e0e0

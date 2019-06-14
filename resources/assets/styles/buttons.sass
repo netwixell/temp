@@ -1,0 +1,188 @@
+.button
+  max-width: 300px
+  width: 100%
+  min-height: 50px
+  +flex-center()
+  +pd(0)
+
+  font-size: 18px
+  line-height: 1
+  font-weight: 700
+  text-decoration: none
+
+  background-color: transparent
+  box-shadow: none
+  border: 0
+  border-radius: 5px
+
+  cursor: pointer
+
+  +trs(box-shadow)
+
+  & > *
+    z-index: 1
+
+  &--white
+    color: $accent--hover
+
+    background-image: linear-gradient(180deg, #fff 0%, #f2f2f2 100%)
+    box-shadow: 0 5px 10px rgba(79, 79, 79, .25)
+
+    &:hover,
+    &:focus
+      background-image: linear-gradient(180deg, #fff 0%, #f2f2f2 138.2%)
+      box-shadow: 0 8px 25px rgba(79, 79, 79, .35)
+
+    &:active
+      box-shadow: 0 0 5px rgba(79, 79, 79, .35)
+
+  &--red
+    color: #fff
+
+    background: linear-gradient(180deg, #ff6644 0%, #c5001e 100%)
+    box-shadow: 0 5px 10px rgba(235, 87, 87, .65)
+
+    &:hover,
+    &:focus
+      background: linear-gradient(180deg, #ff6644 0%, #c5001e 139,8%)
+      box-shadow: 0 8px 20px rgba(235, 87, 87, .85)
+
+    &:active
+      background: #cc0b22
+      box-shadow: 0 0 5px rgba(235, 87, 87, .75)
+
+  &--blue
+    color: #fff
+
+    background: linear-gradient(180deg, $dt--light 13%, $dt 87%)
+    box-shadow: 0 5px 10px rgba($dt, .65)
+
+    &:hover,
+    &:focus
+      background: linear-gradient(180deg, $dt--light 0%, $dt 139,8%)
+      box-shadow: 0 8px 20px rgba($dt, .85)
+
+    &:active
+      background: $dt
+      box-shadow: 0 0 5px rgba($dt, .75)
+
+  &--discount
+    position: relative
+    overflow: hidden
+
+    &::before
+      content: "−10%"
+      position: absolute
+      top: 5px
+      left: calc(100% / 2 - (23px / 2))
+
+      width: 100%
+      height: 23px
+
+      font-size: 12px
+      font-weight: 400
+      color: $text-color
+      line-height: 25px // центрируем
+
+      background-image: linear-gradient(106deg, #fff 50%, #e0e0e0 100%)
+      transform: rotate(45deg)
+
+  &--unfilled
+    position: relative
+
+    color: $accent--hover
+
+    // border: 1px solid $accent--hover
+
+    border-top: 1px solid #ff6644
+    border-bottom: 1px solid #d9222b
+    background-image: linear-gradient(#ff6644, #d9222b), linear-gradient(#ff6644, #d9222b)
+    background-size: 1px 100%
+    background-position: 0 0, 100% 0
+    background-repeat: no-repeat
+
+    overflow: hidden
+
+    transition-property: color, background-color
+    transition-delay: .10s, 0
+
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+
+      +size(100%)
+
+      background-image: linear-gradient(#ff6644, #d9222b)
+      filter: opacity(0)
+
+      +trs()
+
+    &:hover,
+    &:focus
+      color: #fff
+
+      &::before
+        filter: opacity(1)
+
+    &:active
+      color: #fff
+
+      border: none
+      background-color: $accent--hover
+      background-image: none
+
+      &::before
+        filter: opacity(0)
+
+  &--unfilled-blue
+    position: relative
+
+    color: $dt
+
+    // border: 1px solid $dt
+
+    border-top: 1px solid $dt--light
+    border-bottom: 1px solid $dt
+    background-image: linear-gradient($dt--light, $dt), linear-gradient($dt--light, $dt)
+    background-size: 1px 100%
+    background-position: 0 0, 100% 0
+    background-repeat: no-repeat
+
+    overflow: hidden
+
+    transition-property: color, background-color
+    transition-delay: .10s, 0
+
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+
+      +size(100%)
+
+      background-image: linear-gradient($dt--light, $dt)
+      filter: opacity(0)
+
+      +trs()
+
+    &:hover,
+    &:focus
+      color: #fff
+
+      &::before
+        filter: opacity(1)
+
+    &:active
+      color: #fff
+
+      border: none
+      background-color: $dt
+      background-image: none
+
+      &::before
+        filter: opacity(0)

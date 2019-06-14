@@ -1,0 +1,18 @@
+extends ./layout/layout
+
+block variables
+
+  - var title = "Новости — Molfar Beauty Forum"
+
+  - var description = "Новости"
+
+  - var ogImage = "/img/og-image.jpg"
+  - var ogImageSecure = "/img/og-image.jpg"
+  - var pageModifier = "page--article"
+  - var current_url = "/article.html"
+
+block content
+  include article/article
+
+block script
+  script(defer src="/js/article.min.js")

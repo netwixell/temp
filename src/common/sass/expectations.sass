@@ -1,0 +1,56 @@
+// Для чего Molfar Forum?
+.expectations
+  +mg-section()
+
+  &__title-wrapper
+    max-width: 600px
+    padding-top: 15px
+    padding-bottom: 20px
+    // padding-top: 55px // временная плашка, пока нет цитат
+    // padding-bottom: 60px // временная плашка, пока нет цитат
+    margin-bottom: 50px
+
+    text-align: center
+
+    // +break-out--before() // временная плашка, пока нет цитат
+
+    // background-color: $bg-color--light
+
+  &__title
+    margin-bottom: 15px
+
+  &__list
+    display: grid
+    grid-gap: 60px
+    justify-content: center
+
+    margin-bottom: 50px
+
+    +bp-min(480)
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 60px 100px
+
+    +bp-min(1024)
+      grid-gap: 100px 120px
+
+  &__card
+    padding-top: 75px + 20
+
+    background-repeat: no-repeat
+    background-size: 75px 75px
+    background-position: 10px 0
+
+    &--lectures.lazyloaded
+      +bgi("../img/expectations/lectures_125.png", "../img/expectations/lectures_250.png")
+
+    &--networking.lazyloaded
+      +bgi("../img/expectations/networking_125.png", "../img/expectations/networking_250.png")
+
+    &--exhibition.lazyloaded
+      +bgi("../img/expectations/exhibition_125.png", "../img/expectations/exhibition_250.png")
+
+    &--party.lazyloaded
+      +bgi("../img/expectations/party_125.png", "../img/expectations/party_250.png")
+
+  &__button
+    +mg(auto)

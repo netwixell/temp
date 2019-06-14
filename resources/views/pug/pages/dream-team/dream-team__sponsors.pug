@@ -1,0 +1,37 @@
+mixin sponsor(href, name, icon, text)
+  li.sponsors__item-wrapper
+    a.sponsors__item.loading(href=href, target="_blank", rel="noopener")= name
+      img.sponsors__img.lazyload(data-src="../img/partners/"+icon+".svg", src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==", width="160", alt=name)
+      p.sponsors__text= text
+
+section.sponsors
+  .sponsors__container.container
+    h2.sponsors__title Спонсоры
+
+    ul.sponsors__list
+      //- Спонсоры взяты для примера
+      +sponsor("http://www.adore-professional.com.ua/", "Adore", "adore", "Далеко-далеко, за словесными.")
+      +sponsor("https://apriori.od.ua/", "A Priori", "apriori", "Далеко-далеко, за словесными.")
+      +sponsor("https://c-lab.store/", "C-lab", "c-lab", "Далеко-далеко, за словесными.")
+      +sponsor("https://podolog.dp.ua/", "Ирина Егорова", "egorova", "Далеко-далеко, за словесными.")
+      +sponsor("https://elanofficial.com/", "Elan", "elan", "Далеко-далеко, за словесными.")
+      +sponsor("https://www.instagram.com/hairgum_crew_ua/", "Hairgum", "hairgum", "Далеко-далеко, за словесными.")
+      +sponsor("https://kravchenko-anna.com/", "Анна Кравченко", "kravchenko", "Далеко-далеко, за словесными.")
+      +sponsor("https://www.facebook.com/lakmeteamua/", "Lakme", "lakme", "Далеко-далеко, за словесными.")
+      +sponsor("https://www.instagram.com/maxim_gilyov/", "Максим Гилёв", "maxim-gilyov", "Далеко-далеко, за словесными.")
+      +sponsor("http://nouvelle.net.ua/", "Nouvelle", "nouvelle", "Далеко-далеко, за словесными.")
+      +sponsor("http://orising.com.ua/", "Orising", "orising", "Далеко-далеко, за словесными.")
+      +sponsor("", "Permanent Makeup Beauty Academy", "pmu", "Далеко-далеко, за словесными.")
+      +sponsor("http://profcosmetic.if.ua/", "ProfCosmetic", "prof-cosmetic", "Далеко-далеко, за словесными.")
+      +sponsor("https://ruki-nozhnitsi.com.ua/", "Руки-Ножницы", "ruki-nozhnicy", "Далеко-далеко, за словесными.")
+      +sponsor("http://sakelary.com/", "Учебный центр Ксении Сакелари", "sakelari", "Далеко-далеко, за словесными.")
+      +sponsor("http://snb.bg/", "SNB", "snb", "Далеко-далеко, за словесными.")
+      +sponsor("https://vk.com/club90949398", "Solo Art", "solo-art", "Далеко-далеко, за словесными.")
+      +sponsor("http://ysnailacademy.com/", "Yuliya Stadnik", "stadnik", "Далеко-далеко, за словесными словесными.")
+      +sponsor("https://www.voynovastyle.com/", "Voynova Style", "voynova", "Далеко-далеко, за словесными.")
+      +sponsor("http://www.adore-professional.com.ua/", "Adore", "adore", "Спонсор этапа «Причёска»")
+      +sponsor("http://ysnailacademy.com/", "Yuliya Stadnik", "stadnik", "Спонсор этапа «Причёска»")
+
+
+    //- TODO: Сделать AJAX магию
+    //- button.sponsors__more Все спонсоры (??)

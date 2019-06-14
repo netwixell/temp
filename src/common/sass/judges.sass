@@ -1,0 +1,96 @@
+.judges
+  padding-top: 50px
+  padding-bottom: 50px
+
+  color: #fff
+
+  background-color: #1b1b1b
+  background-image: linear-gradient(to top, #080808, #333)
+
+  &__container
+
+    +bp-min(1024)
+      display: grid
+      grid-template-columns: 290px 1fr
+      grid-column-gap: 20px
+
+  &__title-wrapper
+    +divider()
+    max-width: 728px
+    +mg-bottom(20px)
+
+    +bp-min(1024)
+      position: sticky
+      top: 80px // header offset + 20px
+
+      // Чтобы `position: sticky` сработал,
+      // нужно убрать растяжение по всей площади (strech)
+      align-self: start
+      +mg-bottom(0)
+
+  &__title
+    +mg-bottom(10px)
+
+    +text-gradient($gradient--dream-team)
+
+  &__description
+    +mg-bottom(20px)
+
+  &__button
+    +mg(auto)
+
+    // Скрываем основную кнопку
+    +bp-min(1024)
+      display: none
+
+    &--title
+      display: none
+
+      // Показываем кнопку в тайтле
+      +bp-min(1024)
+        display: flex
+
+  &__promo
+    position: relative
+
+    padding-left: 15px
+    +mg-bottom(20px)
+
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      +size(100%)
+
+      // border: 1px solid $dt
+      background-image: linear-gradient($dt--light, $dt)
+      background-size: 1px 100%
+      background-repeat: no-repeat
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto))
+    grid-gap: 20px
+    +mg-bottom(40px)
+
+    +bp-min(768)
+      grid-column-gap: 30px
+      grid-row-gap: 20px
+
+    +bp-min(1024)
+      +mg-bottom(0)
+
+  &__more
+    display: block
+    +mg(auto)
+    +mg-bottom(40px)
+
+    font-style: italic
+    color: $text-color--inactive
+
+    +unbutton()
+
+    // После 768 мы хотим видеть всех сразу
+    +bp-min(768)
+      display: none

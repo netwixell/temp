@@ -1,0 +1,34 @@
+.alert
+  position: fixed
+  top: 70px
+  left: 50%
+  margin-left: -150px
+  z-index: 10
+
+  max-width: 300px
+  width: 100%
+  padding: 13px 23px
+
+  font-size: 16px
+  line-height: 1.15
+
+  border-radius: 5px
+
+  +bp-min(1024)
+    left: auto
+    right: 40px
+
+    max-width: 400px
+    margin-left: 0
+
+    font-size: 18px
+
+  &--warning
+    color: #fff
+
+    background-color: #ffaa47
+
+  &--danger
+    color: #fff
+
+    background-color: #d8291e

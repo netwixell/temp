@@ -1,0 +1,38 @@
+//- include ../mixins/bemto/bemto
+include ../../common/pug/mixins
+block variables
+
+doctype html
+html.page(class= pageModifier, lang="ru")
+
+  head
+    meta(charset="utf-8")
+    title #{title}
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    include ../meta/meta
+    //- meta(name="description" content=description)
+    //- meta(property="og:type" content="website")
+    //- meta(property="og:title" content=title)
+    //- meta(property="og:description" content=description)
+    //- meta(property="og:image:secure_url" content=ogImageSecure)
+    include ../favicon/favicon
+    //- include ../modules/google-analytics
+    //- include ../modules/facebook-pixel
+    include ../g-tag/g-tag
+
+    style(body="opacity: 0; overflow-x: hidden;", html="background-color: #000;")
+
+  body
+    include ../g-tag/_noscript/g-tag_noscript
+    .page__wrapper
+      include ../alert/alert
+      include ../button-menu/button-menu
+      include ../button-to-top/button-to-top
+      include ../header/header
+      main.page__content
+        block content
+      include ../footer/footer
+
+    link(rel="stylesheet", href="/css/style.min.css")
+    script(defer src="/js/scripts.min.js")
+    block script

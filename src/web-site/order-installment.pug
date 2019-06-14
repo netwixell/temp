@@ -1,0 +1,13 @@
+extends ./layout/layout
+
+block variables
+  - var title = "Приобретение билета — Molfar Beauty Forum"
+  - var description = "Приобретение билета на Molfar Beauty Forum ‘19"
+  - var ogImage = ""
+  - var pageModifier = "page--installment"
+
+block content
+  include order-installment/order-installment
+
+block script
+  script(defer src="/js/order.min.js")

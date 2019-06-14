@@ -1,0 +1,86 @@
+.block
+  +img--block()
+  // Нужно дать какое-то ограничение высоте квадрата,
+  // чтобы это не становилось неуклюжим
+  max-height: 400px
+
+  +flex-center()
+
+  // Делаем блок резиновым квадратом
+  &::before
+    content: ""
+    // padding-bottom кратен ширине родителя
+    padding-bottom: 100%
+
+  &__title
+    z-index: 4
+
+    max-width: 300px
+
+    font-size: 14px
+    font-weight: 900
+    color: #fff
+    line-height: $line-height
+    text-align: center
+
+  &__quote
+    max-width: 300px
+    +mg(auto)
+
+  &__quote-author
+    display: inline-block
+    +pd(.5em)
+    margin-bottom: 10px
+
+    font-size: 18px
+    font-weight: 700
+    color: #fff
+
+    background-color: $accent--throwback
+
+  &__link
+    display: block
+    margin-bottom: 10px
+
+    +link()
+
+    &--inline
+      display: inline-block
+      margin-bottom: 0
+
+      +link-inline()
+
+  &__text
+    font-weight: 500 // иначе текст выглядит рубцеватым на Виндоус
+    font-style: italic
+
+    +text-gradient--grey()
+
+  &__icon
+    font-style: normal
+    -webkit-text-fill-color: #f2f2f2
+
+  &--cover
+
+    &::after
+      content: ""
+      position: absolute
+      z-index: 3
+
+      +size(100%)
+
+      background-color: rgba(220, 39, 45, .85)
+
+  &--quote
+    background-image: none
+
+    // Делаем блок резиновым квадратом
+    &::before
+      content: ""
+      // padding-bottom кратен ширине родителя
+      padding-bottom: 100%
+
+    // Костыль. Подтягивает чуть ближе к себе,
+    // когда один в ряд
+    &:last-child
+      margin-bottom: -50px

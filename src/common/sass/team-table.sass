@@ -1,0 +1,70 @@
+.team-table
+  width: 100%
+
+  border-spacing: 0
+
+  &__body
+    display: grid
+    grid-template-columns: auto 1fr
+    grid-column-gap: 50px
+    align-items: center
+    align-content: flex-start
+
+  &__title
+    font-size: 16px
+    font-weight: normal
+
+    & > *
+      font-weight: inherit
+
+  &__photo,
+  &__votes,
+    grid-row: 1 / 4
+    grid-column: 2
+    justify-self: end
+
+    white-space: nowrap
+
+    a
+      +link-d($dt, darken($dt, 10%))
+
+  &__photo
+
+    &:not(:last-of-type)
+      grid-row: 1
+
+  &__results
+    grid-row: 1 / 4
+    grid-column: 2
+    justify-self: end
+
+    white-space: nowrap
+
+    a
+      +link($dt, darken($dt, 10%), lighten($dt, 10%))
+
+  &__photo + .team-table__results
+    grid-row: 2
+
+  &__badge + .team-table__photo
+    grid-row: 2
+
+  &__badge + .team-table__photo + .team-table__results
+    grid-row: 3
+
+  &__title
+    grid-column: 1
+
+  &__address
+    grid-column: 1
+
+  &__badge
+    order: -1
+
+    font-size: 10px
+    font-weight: 700
+    color: $dt
+    letter-spacing: .0357143em
+
+    &--winner
+      color: $dt--gold

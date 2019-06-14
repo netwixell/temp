@@ -1,0 +1,20 @@
+.comments
+  display: flex
+  flex-wrap: wrap
+
+  &__item-wrapper
+    +mg-right(20px)
+
+    color: $text-color--placeholder
+
+    background-repeat: no-repeat
+    background-position: 0 50%
+    background-size: auto
+
+    &--comments
+      padding-left: 10px + 4
+      background-image: url("../img/comments.svg")
+
+    &--views
+      padding-left: 12px + 4
+      background-image: url("../img/views.svg")

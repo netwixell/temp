@@ -1,0 +1,166 @@
+.tickets
+  +mg-section()
+
+  &__title
+    margin-bottom: 40px
+
+    +bp-min(768)
+      margin-bottom: 60px
+
+  &__container
+    +pd(0) // не обрезаем тень на 320
+
+    +bp-min(480)
+      +pd(4%)
+
+  &__description-wrapper
+    position: relative
+
+    padding-top: 25px
+    padding-bottom: 30px
+    margin-bottom: 30px
+
+    text-align: center
+
+    background-color: $bg-color--light
+
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 50%
+      right: 50%
+      bottom: 0
+      z-index: -1
+
+      width: 100vw
+      margin-left: -50vw
+      margin-right: -50vw
+
+      background-color: $bg-color--light
+
+  &__title
+    margin-bottom: 10px
+
+    text-align: center
+
+  &__description
+    font-style: italic
+
+  &__discount
+    +text-gradient()
+
+    font-size: 36px
+    font-weight: 700
+
+  &__steps
+    margin-bottom: 40px
+
+  // swiper
+  &__swiper-container
+    position: relative
+    overflow: hidden
+
+    padding-top: 37px // чтобы отобразить тень
+    padding-bottom: 37px // чтобы отобразить тень
+    // margin-top: -37px // чтобы отменить отбивку
+    margin-bottom: -37px // чтобы отменить отбивку
+
+  &__list
+    position: relative
+    display: flex
+    // height: auto
+
+    & > *
+      flex-shrink: 0
+
+  &__button
+    +unbutton()
+    content: ""
+    position: absolute
+    top: 0
+
+    +size(8px, 14px)
+    padding: 263px 13px // половина высоты слайдера (526)
+
+    background-image: url(../img/angle.svg)
+    background-repeat: no-repeat
+    background-position: 50%
+    background-size: 8px 14px
+
+    outline: none
+
+    &:active
+      top: 2px
+
+    +bp-min(1024)
+      +size(16px, 28px)
+      background-size: 16px 28px
+
+    &--prev
+      left: 0
+      transform: rotate(-180deg)
+
+    &--next
+      right: 0
+
+  .swiper-button-disabled
+    opacity: .3
+    cursor: default
+
+
+  // настройки Swiper
+  .swiper-slide
+    z-index: 0
+
+    background-color: $bg-color--light
+    opacity: 0
+    box-shadow: 0 4px 27px rgba(202, 202, 202, .32)
+
+    transition: box-shadow .5s, opacity .5s, transform .5s
+
+    &:not(.swiper-slide-active)
+      cursor: pointer
+
+    // FIXME: Костыль. Не позволяем кликнуть на невидимый слайдер
+    &:not(.swiper-slide-active):not(.swiper-slide-prev):not(.swiper-slide-next)
+      animation: visibility-hidden 0s 1s forwards
+
+    +bp-min(480)
+      transition: box-shadow 1s, opacity 1s, transform 1s
+
+  .swiper-slide-active
+    z-index: 2
+
+    background-color: #fff
+    opacity: 1
+
+  .swiper-slide-prev,
+  .swiper-slide-next
+    z-index: 1
+
+    background-color: #fff
+    opacity: .65
+
+    // чтобы нельзя было жать кнопки на не текущем слайде
+    &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 2
+
+      +size(100%)
+
+  +bp-min(768)
+    .swiper-slide
+      // transform: translateY(0)
+
+    .swiper-slide-active
+      // transform: translateY(-5%)
+      cursor: default
+      box-shadow: 0 8px 37px rgba(202, 202, 202, .42)
+
+    .swiper-slide-prev,
+    .swiper-slide-next
+      // transform: translateY(0)

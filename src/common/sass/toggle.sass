@@ -1,0 +1,65 @@
+.toggler
+  position: relative
+
+  display: flex
+  justify-content: center
+
+  input
+    display: none
+
+    &:checked ~ .toggler__toggle--yes
+      color: $bg-color--inactive
+
+      cursor: pointer
+
+    &:not(:checked) ~ .toggler__toggle--no
+      color: $bg-color--inactive
+
+      cursor: pointer
+
+    &:checked ~ .toggler__slider::before
+      transform: translateX(20px)
+
+  &__slider
+    +size(40px, 20px)
+    position: relative
+
+    margin-right: 5px
+
+    background-color: #fff
+    box-shadow: inset 0px 1px 4px rgba(189, 189, 189, 0.5)
+    border-radius: 20px
+
+    transition: .4s
+
+    cursor: pointer
+
+    &::before
+      +size(18.73px)
+      content: ""
+      position: absolute
+      left: 0
+
+      background-color: #fff
+      background: linear-gradient(152deg, #ff6644 11%, #bc011d 89%)
+      box-shadow: 0 2px 5px rgba(188, 1, 29, .5)
+      border-radius: 50%
+
+      transition: .4s
+
+  &__toggle
+    user-select: none
+
+    &:not(:last-child)
+      margin-right: 5px
+
+  &--disabled
+    color: $bg-color--inactive
+
+    pointer-events: none
+
+    .toggler__slider
+
+      &::before
+        background: linear-gradient(152deg, #fff 11%, #f2f2f2 89%)
+        box-shadow: 0 2px 5px rgba(189, 189, 189, .5)

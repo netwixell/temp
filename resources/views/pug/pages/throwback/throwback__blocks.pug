@@ -1,0 +1,28 @@
+- var file= "resources/views/pug/pages/throwback/throwback__blocks.json";
+- var blocks= JSON.parse(fs.readFileSync(file));
+
+section.blocks
+  h2.blocks__title.visually-hidden Фото-воспоминания Molfar Beauty Forum ‘18
+
+  ul.blocks__wrapper
+    each block in blocks
+      if (block.type== "quote")
+        li.block.block--quote(class= block.class).blocks__block
+          //- атрибут cite только если будут прямые ссылки на цитаты
+          blockquote.block__quote(cite= `${block.cite}`)
+            strong.block__quote-author= block.quoteAuthor
+            a.block__link(href= `${block.linkHref}`, target="_blank", rel="noopener")= block.linkTitle
+            p.block__text!= block.text
+      else
+        li.block(class= block.class).blocks__block.loading
+          h2.block__title= block.title
+          img.block__img.lazyload(
+              data-srcset=`${block.image320} 320w, ${block.image640} 640w, ${block.image1280} 1280w`,
+              data-src=`${block.image320}`,
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+              alt= block.alt)
+
+  .blocks__wrapper.blocks__wrapper--advertising
+    p.blocks__advertising Полный фотоотчёт #[br]смотрите на нашем Драйве
+    a.blocks__link.button.button--red(href="https://drive.google.com/open?id=1we5Sx4zr4joabLZR3_0ePFd0rtsEHCnj", target="_blank", rel="noopener")
+      span Смотреть все фото

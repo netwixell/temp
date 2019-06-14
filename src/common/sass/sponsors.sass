@@ -1,0 +1,78 @@
+.sponsors
+  +pd-section
+
+  &__container
+    display: flex
+    flex-direction: column
+
+  &__title
+    +divider--center()
+    +mg(auto)
+    margin-bottom: 50px
+
+    +text-gradient($gradient--dream-team)
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(auto-fill, 160px)
+    grid-gap: 60px
+    justify-content: center
+    align-items: center
+
+    +mg-bottom(60px)
+
+  &__item
+    +unfont()
+    color: $text-color--inactive
+
+    // Эмуляция цвета $text-color--inactive
+    filter: contrast(0%) brightness(100%)
+
+    &:hover
+      color: $text-color
+
+      filter: contrast(0%) brightness(50%)
+
+    &.loading
+      +img(160px, 100px)
+
+      &::before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        z-index: 1
+
+        width: 32px
+        height: 32px
+        margin-top: -16px
+        margin-left: -16px
+
+        border-radius: 32px
+
+        animation: scaleout 1.2s infinite ease-in-out
+
+        // Tweak as needed
+        mix-blend-mode: soft-light
+        background-color: rgba(0, 0, 0, .9)
+
+  &__img
+    +mg-bottom(10px)
+
+  &__text
+    font-size: 12px
+    font-style: italic
+    text-align: center
+
+  &__more
+    display: block
+    +mg(auto)
+
+    font-style: italic
+    color: $text-color--inactive
+
+    +unbutton()
+
+    // После 768 мы хотим видеть всех сразу
+    +bp-min(768)
+      display: none

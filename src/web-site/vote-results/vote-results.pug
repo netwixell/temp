@@ -1,0 +1,121 @@
+mixin stage(stage)
+  table
+
+    +e.THEAD.thead
+      +e.TR.tr
+        th= stage
+        +e.TH.num 59 баллов
+
+    +e.TBODY.tbody
+      +e.TR.tr--judge-name
+        th Ксения Сакелари
+        th
+      +e.TR.tr
+        td Сложность и техничность
+        +e.TD.num 10
+      +e.TR.tr
+        td Оригинальность образа
+        +e.TD.num 4
+      +e.TR.tr
+        td Цветовое решение
+        +e.TD.num 4
+      +e.TR.tr
+        td Общее впечатление
+        +e.TD.num 4
+
+      +e.TR.tr--judge-name
+        th Виктория Матвеева
+        th
+      +e.TR.tr
+        td Сложность и техничность
+        +e.TD.num 10
+      +e.TR.tr
+        td Оригинальность образа
+        +e.TD.num 4
+      +e.TR.tr
+        td Цветовое решение
+        +e.TD.num 4
+      +e.TR.tr
+        td Общее впечатление
+        +e.TD.num 4
+
+      +e.TR.tr--judge-name
+        th Юлія Стаднік
+        th
+      +e.TR.tr
+        td Сложность и техничность
+        +e.TD.num 10
+      +e.TR.tr
+        td Оригинальность образа
+        +e.TD.num 4
+      +e.TR.tr
+        td Цветовое решение
+        +e.TD.num 4
+      +e.TR.tr
+        td Общее впечатление
+        +e.TD.num 4
+
+      +e.TR.tr--judge-name
+        th Константин Константинопольский
+        th
+      +e.TR.tr
+        td Сложность и техничность
+        +e.TD.num 10
+      +e.TR.tr
+        td Оригинальность образа
+        +e.TD.num 4
+      +e.TR.tr
+        td Цветовое решение
+        +e.TD.num 4
+      +e.TR.tr
+        td Общее впечатление
+        +e.TD.num 4
+
+
++b.SECTION.vote-results
+  +e.container.container
+
+    +e.HEADER.wrapper--header
+      +e.H1.title <Название команды>
+
+    //- Голосование на сайте. Онлайн
+    +e.TABLE.wrapper--qualifying
+      +e.THEAD.thead--outer
+        +e.TR.tr--outer
+          th Отборочный этап:
+          +e.TH.num 177 баллов
+
+      +e.TBODY.tbody
+        +e.TR.tr--inner
+          td
+            +stage("Маникюр")
+          td
+            +stage("Макияж")
+          td
+            +stage("Причёска")
+
+      +e.TFOOT.tfoot
+        +e.TR.tr--outer
+          td Онлайн-голосование:
+          +e.TD.num 100 241 голос
+
+    //- Голосование на Буковеле. Оффлайн
+    +e.TABLE.wrapper--qualifying
+      +e.THEAD.thead--outer
+        +e.TR.tr--outer
+          th Финальный этап:
+          +e.TH.num 177 баллов
+
+      +e.TBODY.tbody
+        +e.TR.tr--inner
+          td
+            +stage("Маникюр")
+          td
+            +stage("Макияж")
+          td
+            +stage("Причёска")
+
+      +e.TFOOT.tfoot
+        +e.TR.tr--outer
+          td Голосование зрителей:
+          +e.TD.num 100 241 голос

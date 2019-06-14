@@ -1,0 +1,61 @@
+.to-top
+  position: fixed
+  bottom: 30px
+  right: 50%
+  z-index: 3
+
+  +size(32px)
+  margin-right: -16px
+
+  +unfont()
+  +unbutton()
+
+  background-image: linear-gradient(180deg, #ff6644 0%, #c5001e 100%)
+  box-shadow: 0 5px 10px rgba(235, 87, 87, .65)
+  border-radius: 50%
+  opacity: 0
+  visibility: hidden
+
+  +trs(box-shadow)
+  animation: fade-out .25s ease-out forwards
+
+  &:active
+    box-shadow: 0 2px 4px rgba(235, 87, 87, .65)
+
+  &:focus
+    outline: none
+
+  // Стрелка вверх из двух палок
+  &::before,
+  &::after
+    content: ""
+    position: absolute
+    top: 50%
+
+    +size(14px, 2px)
+    margin-top: -2.5px
+
+    background-color: #fff
+
+  &::before
+    left: 4.5px
+    transform: rotate(-45deg)
+
+  &::after
+    right: 4.5px
+    transform: rotate(45deg)
+
+  +bp-min(768)
+    bottom: 40px
+    right: 40px
+
+    margin-right: 0
+
+  +bp-min(1024)
+    display: none
+
+  &--active
+    opacity: 1
+    visibility: visible
+
+    animation: fade-in .25s ease-in forwards

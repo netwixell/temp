@@ -1,0 +1,118 @@
+.prize
+  +pd-section(top)
+
+  &__title-wrapper
+    max-width: 350px
+    +mg(auto)
+    +mg-bottom(50px)
+
+  &__title
+    +divider--center()
+    +mg(auto)
+    +mg-bottom(15px)
+
+    +text-gradient($gradient--dream-team)
+    text-align: center
+
+    +bp-min(768)
+      +mg-bottom(20px)
+
+  &__description
+    text-align: center
+
+  &__text
+    +mg-bottom(10px)
+
+    text-align: center
+
+  &__subtitle
+    font-weight: 900
+
+  // Слайд
+  &__card
+    max-width: 540px
+    width: 100%
+    +pd(20px)
+
+  &__img-wrapper
+    +img(280px, 220px)
+
+    +mg-bottom(30px)
+
+    box-shadow: 0 5px 15px rgba(51, 51, 51, .2)
+
+  &__button
+    +unbutton()
+    content: ""
+    position: absolute
+    top: calc(50% - 7px)
+    z-index: 3
+
+    +size(8px, 14px)
+
+    background-image: url(../img/angle.svg)
+    background-repeat: no-repeat
+    background-position: 50%
+    background-size: 8px 14px
+
+    outline: none
+
+    // Чтобы увеличить кликабельную зону
+    &::before
+      content: ""
+      position: absolute
+      top: -50%
+      left: -50%
+
+      +size(200%)
+
+    &:active
+      top: calc(50% - 5px)
+
+    +bp-min(1024)
+      top: calc(50% - 14px)
+
+      +size(16px, 28px)
+      background-size: 16px 28px
+
+      &:active
+        top: calc(50% - 12px)
+
+    &--prev
+      left: 0
+      transform: rotate(-180deg)
+
+    &--next
+      right: 0
+
+  .swiper-button-disabled
+    opacity: .3
+    cursor: default
+
+  // swiper
+  &__swiper-container
+    position: relative
+    overflow: hidden
+
+  &__list
+    position: relative
+    display: flex
+
+    & > *
+      flex-shrink: 0
+
+  .swiper-slide
+    opacity: 0
+
+    transition: opacity .5s, transform .5s
+
+    &:not(.swiper-slide-active)
+
+      .prize__text-wrapper
+        visibility: hidden
+
+    +bp-min(480)
+      transition: opacity 1s, transform 1s
+
+  .swiper-slide-active
+    opacity: 1

@@ -1,0 +1,52 @@
+.payment-details
+  position: relative
+
+  max-width: 320px
+  +mg(auto)
+  padding-top: 20px
+  padding-bottom: 20px
+
+  +break-out--before($bg-color)
+
+  &:not(:last-child)
+    margin-bottom: 40px
+
+  +bp-min(768)
+    padding: 20px
+
+    +mg(0)
+    +break-in--before($bg-color)
+
+  &__title
+    display: block
+    margin-bottom: 10px
+
+    font-size: 18px
+    font-weight: 700
+    line-height: 1.15
+
+    &--secondary
+      font-size: 14px
+      font-weight: 900
+
+    &--text
+      font-size: 12px
+      font-weight: 400
+
+  &__text
+    display: block
+    margin-bottom: 20px
+
+    &:last-child
+      margin-bottom: 0
+
+    &--card-number
+      margin-bottom: 0
+
+    &--card-holder
+      margin-bottom: 30px
+
+    &--phone-number
+      margin-bottom: 0
+
+    &--phone-holder

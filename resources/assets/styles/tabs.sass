@@ -1,0 +1,17 @@
+// Стили и анимация для табов
+// https://github.com/cferdinandi/tabby
+
+.js-tabby .active
+  opacity: 1
+
+  // Только на id="success" применяется анимация
+  // Если пользователь кликнет назад,
+  // он попадёт без промедления
+  &#success
+    transition: opacity 1s
+    transition-delay: 1s
+
+.tabs-pane
+
+  &:not(.active)
+    opacity: 0

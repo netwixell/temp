@@ -1,0 +1,50 @@
+//- - var file="./../../resources/views/pug/pages/index/tickets.json";
+- var file="src/web-site/tickets/tickets.json";
+//- - var tickets = require(file);
+- var tickets= JSON.parse(fs.readFileSync(file));
+
+section.tickets#tickets
+  .tickets__container.container
+    h2.tickets__title Билеты
+
+    ol.steps.tickets__steps
+      li.steps__step
+       span Выберите #[br]билет
+      li.steps__step
+       span Заполните #[br]форму
+      li.steps__step
+       span Ожидайте #[br]звонка
+
+    .tickets__swiper-container.swiper-container
+      ul.tickets__list.swiper-wrapper
+        each ticket,index in tickets
+            li.ticket.ticket--center.tickets__ticket.swiper-slide.js-ticket
+              form(method="POST" action="buying")
+                input(type="hidden" name="ticket_id" value=index)
+                .ticket__title-wrapper
+                  h3.ticket__title= ticket.title
+                  b.ticket__price.js-ticket__price(data-price=ticket.price) !{ticket.price.replace(/\B(?=(\d{3})+(?!\d))/g, "&#8201;")} ₴
+                  p.ticket__price.ticket__price--up !{ticket.price_up}
+
+                ul.ticket__offers
+                  each offer in ticket.offers
+                    li.ticket__offer= offer
+                  li.ticket__offer
+                    label.toggler.ticket__toggler
+                      input.js-ticket__price(type="checkbox" data-price="0" data-price-on="2000" data-price-off="0")
+                      p.toggler__toggle.toggler__toggle--yes Общий номер
+                      .toggler__slider
+                      p.toggler__toggle.toggler__toggle--no Одиночный номер
+                button.ticket__button.js-ticket__button.js-ticket__button--buying.button.button--red(type="submit")
+                  span Приобрести сейчас
+                  b.ticket__price.ticket__price--white 7&#8201;500 ₴
+
+                input(name="first_payment" type="hidden" disabled value="1500")
+                input(name="commission_k" type="hidden" disabled value="1.1")
+                input(name="payments_count" type="hidden" disabled value="10")
+                button.ticket__button.js-ticket__button.js-ticket__button--installment.button.button--unfilled(type="submit" formaction="installment")
+                  span Приобрести в рассрочку
+                  b.ticket__price.ticket__price--solid 1&#8201;100 ₴ / мес
+
+      button.tickets__button.tickets__button--prev.swiper-button-prev
+      button.tickets__button.tickets__button--next.swiper-button-next

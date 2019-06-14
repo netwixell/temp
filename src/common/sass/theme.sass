@@ -1,0 +1,99 @@
+.theme
+  position: relative
+
+  min-height: 100vh // 550px (iPhoneSE)
+
+  background-color: transparent !important
+
+  &::before
+    content: ""
+    position: fixed
+    top: 0
+    left: 0
+    z-index: -1
+
+    width: 100%
+    min-height: 100vh // 550px (iPhoneSE)
+    display: block
+
+    background-size: cover
+    background-repeat: no-repeat
+    // background-attachment: fixed
+
+  +bp-max(767)
+
+    &.lazyloaded
+
+      &::before
+        +bgi("../img/theme/dream-team__theme-mobile_480.jpg", "../img/theme/dream-team__theme-mobile_960.jpg")
+
+  +bp-min(768)
+
+    &.lazyloaded
+
+      &::before
+        +bgi("../img/theme/dream-team__theme-full_960.jpg", "../img/theme/dream-team__theme-full_1536.jpg")
+        // Скроем обрубок руки
+        background-position: 49% 0
+
+  +bp-min(1280)
+
+    &.lazyloaded
+
+      &::before
+        +bgi("../img/theme/dream-team__theme-full_1440.jpg", "../img/theme/dream-team__theme-full_2880.jpg")
+
+  // Порадуем Full-HD элиту
+  +bp-min(1440)
+
+    &.lazyloaded
+
+      &::before
+        +bgi("../img/theme/dream-team__theme-full_2880.jpg", "../img/theme/dream-team__theme-full_2880.jpg")
+
+  // Декорация
+  &::after
+    content: ""
+    position: absolute
+    bottom: -6vmax
+    z-index: 1
+
+    +size(100%)
+
+    background-image: url(../img/theme/dream-team__theme-decoration.svg)
+    background-position: 75% 100%
+    background-size: 150%
+    background-repeat: no-repeat
+
+    +bp-min(600)
+      bottom: -10vmax // чуть ниже, чтобы закрыть дырку
+
+  &__container
+    position: fixed
+    top: 60px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: -1
+
+    +bp-min(768)
+      +size(100%)
+      display: flex
+      justify-content: flex-end
+      align-items: center
+
+  &__title
+    font-size: 24px
+    text-align: center
+
+    +text-gradient($gradient--dream-team)
+
+    +bp-min(768)
+      max-width: 400px
+
+      font-size: 36px
+      text-align: left
+
+  br
+
+    +bp-min(1024)
+      display: none

@@ -1,0 +1,211 @@
+.card
+  width: 290px
+  display: flex
+  flex-direction: column
+  padding-left: 10px
+  padding-right: 10px
+  padding-bottom: 10px
+
+  background-color: #fff
+  box-shadow: 0 5px 25px rgba(79, 79, 79, .15)
+  border-radius: 5px
+
+  overflow: hidden
+
+  &__img-wrapper
+    +mg-bottom(5px)
+
+  &__name
+    margin-bottom: 10px
+
+  &__about
+    padding-bottom: 10px
+
+    &:not(:last-child)
+      margin-bottom: auto
+
+  &__published
+    display: inline-block
+    +mg-bottom(15px)
+
+    color: $text-color--inactive
+    font-style: italic
+
+  &__link
+    align-self: flex-end
+
+    +link(#333)
+    font-weight: 700
+    text-transform: uppercase
+    text-decoration: none
+
+      // &:hover,
+      // &:focus,
+      // &:active
+      //   transition: transform .25s ease-out
+
+    > span
+      margin-right: 25px
+
+  &__social
+    position: relative
+
+    // рисуем разделитель
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 50%
+      right: 50%
+
+      display: block
+      width: calc(100% + 10px + 10px) // выводим за рамки
+      margin-left: calc(-50% - 10px) // выравниваем
+      margin-right: -50%
+
+      border-top: 1px solid $bg-color--inactive
+
+    .social__link
+      padding-top: 10px
+
+  &__badge
+    display: block
+    margin-top: 10px
+    margin-bottom: 10px
+
+    font-size: 10px
+    font-weight: 700
+    color: $dt
+
+    &--gold
+      color: $dt--gold
+
+  &--guest
+    width: 260px
+
+    .card__name
+      +text-gradient()
+
+    .card__about
+      font-style: italic
+      color: $text-color--inactive
+
+  &--expectation
+    width: auto
+
+    .card__name
+      +text-gradient()
+
+    .card__about
+      font-style: italic
+      color: $text-color--inactive
+
+    box-shadow: none
+    border-radius: 0
+
+  &--judge
+    width: auto
+    +pd(0)
+    padding-bottom: 0
+
+    background-color: transparent
+    border-radius: 0
+    box-shadow: none
+
+    .card__img-wrapper
+      +img(300px, 300px)
+
+      &::after
+        content: ""
+        position: absolute
+        z-index: 3
+        bottom: 0
+
+        display: block
+        +size(100%, 5px)
+        background-image: $gradient--dream-team
+
+    .card__name
+      font-size: 14px
+      font-weight: 900
+
+    .card__about
+      padding-bottom: 0
+
+      font-size: 12px
+
+  &--news
+    box-shadow: none
+    border-radius: 0
+
+    .card__name
+      font-size: 18px
+
+    .card__link
+      align-self: auto
+
+      color: inherit
+      font-weight: inherit
+      text-transform: none
+      text-decoration: underline
+
+    .card__about
+      padding-bottom: 0
+      +mg-bottom(30px)
+
+      line-height: 1.8
+
+  &--vote
+    width: 300px
+    +pd(0)
+    padding-bottom: 0
+
+    box-shadow: none
+    border-radius: 0
+
+    .card__score,
+    .card__about
+      color: $text-color--inactive
+
+    .card__about
+      padding-bottom: 0
+
+      +mg-bottom(10px)
+
+    .card__img-wrapper
+      +img(2, 3)
+
+      // Плюсик
+      &::after
+        content: ""
+        position: absolute
+        right: 0
+        bottom: 0
+        z-index: 2
+
+        +size(42px)
+
+        border-top-left-radius: 5px
+        background-color: rgba(#333, .5)
+        background-image: url(../img/svg/plus.svg)
+        background-repeat: no-repeat
+        background-position: center
+
+    .card__wrapper
+      display: grid
+      grid-template-columns: 160px auto
+      grid-column-gap: 10px
+      align-items: center
+
+      &--end-vote
+        display: block
+
+        .card__score
+          display: block
+          margin-bottom: 10px
+
+          color: unset
+
+        .card__results
+          +link($dt, darken($dt, 10%), lighten($dt, 10%))
+          display: inline-block

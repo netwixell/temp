@@ -1,0 +1,17 @@
+//- extends ../layouts/main
+extends ../layouts/main__rules
+
+block variables
+  - var title = "Правила конкурса Dream Team — Molfar Beauty Forum"
+  - var description = "Регламент и правила конкурса Dream Team"
+  - var ogImage = "/img/og-image--dream-team.jpg"
+  - var ogImageSecure = "/img/og-image--dream-team.jpg"
+  - var pageModifier = "page--rules"
+  - var current_url = "/rules.html"
+
+block content
+  //- include ../modules/to-top
+  include rules/rules__rules
+
+block script
+  script(defer src="/js/rules.min.js")

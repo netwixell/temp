@@ -1,0 +1,43 @@
+.daylist
+  +break-out()
+  max-width: 600px
+  display: flex
+  justify-content: space-between
+  +mg-bottom(20px)
+
+  background-image: linear-gradient(180deg, #ffffff 0%, #f2f2f2 100%)
+  border-radius: 5px
+  box-shadow: 0 5px 10px rgba(79, 79, 79, .25)
+
+
+  +bp-min(600)
+    +break-in()
+    +mg(auto)
+
+    overflow: hidden
+
+  +bp-min(768)
+    width: 60%
+
+  &__day-wrapper
+    flex: 1 0 auto
+
+    color: $accent
+    text-align: center
+
+    &:not(:last-child)
+      border-right: 1px solid #e0e0e0
+
+    &.active
+      color: #fff
+
+      background-color: $accent
+
+  &__day
+    display: block
+    padding-top: 7px
+    +pd(15px)
+    padding-bottom: 7px
+
+    +unlink
+    color: inherit

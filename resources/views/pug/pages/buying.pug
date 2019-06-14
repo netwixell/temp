@@ -1,0 +1,15 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Приобретение билета — Molfar Beauty Forum"
+  - var description = "Приобретение билета на Molfar Beauty Forum ‘19"
+  - var ogImage = ""
+  - var pageModifier = "page--buying"
+
+block content
+  include ../modules/buying
+
+block script
+  script(defer src="/js/order.min.js")
+  script.
+    tabby.init();

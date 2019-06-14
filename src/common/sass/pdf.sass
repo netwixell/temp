@@ -1,0 +1,54 @@
+.pdf
+  color: $text-color--secondary
+
+  &__container
+    max-width: 595px // A4
+    // max-height: 842px // A4
+
+  a
+    display: block
+
+    color: inherit
+    font-weight: inherit
+    +unlink()
+
+  header
+    display: flex
+    justify-content: space-between
+    padding-top: 30px
+    margin-bottom: 40px
+
+  li
+    +mg-bottom(5px)
+
+  table
+    border-collapse: collapse
+    table-layout: fixed
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 60px
+
+  thead
+
+    td
+      font-size: 24px
+
+  th
+    padding-bottom: 5px
+
+    font-size: 12px
+    font-weight: 400
+    line-height: 1.15
+    text-align: left
+
+  td
+    padding-bottom: 30px
+
+    font-weight: 700
+    line-height: 1.15
+    color: $text-color
+
+  p
+    &:not(:last-of-type)
+      margin-bottom: 30px

@@ -1,0 +1,13 @@
+extends ./layout/layout
+
+block variables
+  - var title = "Molfar Beauty Forum 2018"
+  - var description = "Molfar Beauty Forum — как это было в 2018 году"
+  - var ogImage = "/img/og-image.jpg"
+  - var ogImageSecure = "/img/og-image.jpg"
+  - var pageModifier = "page--throwback"
+  - var current_url = "/throwback.html"
+
+block content
+  include throwback__hero/throwback__hero
+  include throwback__blocks/throwback__blocks

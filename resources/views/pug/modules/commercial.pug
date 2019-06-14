@@ -1,0 +1,28 @@
+mixin commercial(title, text, linkText, linkHref, img)
+  figure.commercial
+    .commercial__container.container
+      .commercial__wrapper.container
+        .commercial__inner.commercial__inner--text
+          p.commercial__text
+            b.commercial__title= title
+          p.commercial__text= text
+          p.commercial__text
+            a.commercial__link(href=linkHref target="_blank" rel="noopener")= linkText
+
+        .commercial__inner
+          .commercial__img-wrapper.loading
+            img.commercial__img.lazyload(
+              data-srcset="./img/commercial/"+img+" 300w, ./img/commercial/"+img+" 600w, ./img/commercial/"+img+" 900w",
+              data-src="./img/commercial/"+img+"",
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+              alt=title)
+
+    figcaption.commercial__caption.container
+      em Спонсорская реклама
+
++commercial(
+  "Lorem, ipsum",
+  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus deserunt quae veritatis ipsa dolor excepturi",
+  "O dolor",
+  "#",
+  "aura.png")

@@ -1,0 +1,73 @@
+.event
+  +mg-bottom(30px)
+  display: grid
+  grid-template-columns: 1fr 5fr
+
+  +bp-min(1024)
+    grid-template-columns: 50px 1fr
+
+  &__time
+    font-weight: 700
+    font-style: italic
+
+    &--start
+      color: $accent
+
+    &--end
+      color: $text-color--placeholder
+
+  &__about
+
+    +bp-min(1024)
+      display: grid
+      grid-template-columns: 4fr 3fr
+      grid-column-gap: 20px
+
+  &__text-wrapper
+    +mg-bottom(10px)
+
+    +bp-min(1024)
+      +mg-bottom(0)
+
+  &__title
+    display: inline
+
+    font-size: 14px
+    // font-weight: 900
+    font-weight: 700
+
+  &__badge
+    position: relative
+
+    +pd(.5em)
+    padding-bottom: .3em
+    margin-left: .3em
+
+    font-size: 11px
+    font-weight: 600
+    color: #fff
+    white-space: nowrap
+
+    border-radius: 2px
+    background-color: $accent
+
+  &__description
+    +mg-bottom(10px)
+
+  &__lector
+    display: block
+    +mg-bottom(10px)
+
+    color: $text-color--inactive
+    font-style: italic
+
+  &__logo
+    display: grid
+    grid-template-columns: repeat(auto-fill, 120px)
+    grid-gap: 10px
+
+  &__img
+    +unfont()
+
+    // Эмуляция цвета $text-color--inactive
+    filter: contrast(0%) brightness(100%)

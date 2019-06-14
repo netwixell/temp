@@ -1,0 +1,76 @@
+.likes
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    margin: -10px
+
+  &__item-wrapper
+    // flex: 1
+    margin: 10px
+
+  &__item
+    +unbutton()
+    display: flex
+    align-items: center
+    padding: 10px 5px
+
+
+    border: 1px solid #d3d6db
+    border-radius: 5px
+
+    &::before
+      margin-right: 10px
+
+      font-size: 21px
+      line-height: 1
+
+    &:focus,
+    &:hover
+      border-color: #217ce8
+
+    &:active
+      background-color: rgba(33, 124, 232, 0.1)
+      border-color: #217ce8
+
+    &--active
+      background-color: rgba(33, 124, 232, 0.1)
+      border-color: #217ce8
+
+    &--love
+
+      &::before
+        content: "😍"
+
+    &--funny
+
+      &::before
+        content: "😅"
+
+    &--wow
+
+      &::before
+        content: "😲"
+
+    &--angry
+
+      &::before
+        content: "😠"
+
+  &__text
+    +mg-right(5px)
+
+    line-height: 1
+
+    white-space: nowrap
+    user-select: none
+
+  &__counter
+    +mg-right(.3em)
+
+    user-select: none
+
+  &__counter-wrapper
+    +mg-bottom(20px)
+
+    font-weight: 700

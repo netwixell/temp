@@ -1,0 +1,16 @@
+mixin step(step, text)
+  li(class="how-it-works__item how-it-works__item--"+step+" lazyload")
+    p.how-it-works__text= text
+
+
+section.how-it-works
+  .how-it-works__container.container
+
+    ol.how-it-works__list
+      li.how-it-works__title-wrapper
+        h2.how-it-works__title Как проходит Dream Team
+      +step("I", "Соберите команду и зарегестрируйтесь")
+      +step("II", "Создайте целостный образ на тему «Звёздная невеста»")
+      +step("III", "Отошлите фотографии")
+      +step("IV", "Пройдите отбор в Гранд-финал")
+      +step("V", "Выиграйте Гран-при 100 000 гривен")

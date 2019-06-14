@@ -1,0 +1,264 @@
+.hero
+  display: flex
+  min-height: 100vh
+  margin-bottom: 100px
+
+  color: #fff
+
+  background-color: #000
+
+  // Летающие ромбики
+  canvas
+
+    &#particles2
+      z-index: 1
+
+      opacity: 0
+
+      animation: fade-in 3s 2.5s ease forwards
+
+    +bp-minmax(1025, 1440)
+      opacity: 0
+
+      animation: fade-in 3s 1.5s ease forwards
+
+  //  Картинка-ромб
+  &__bg-wrapper
+    position: absolute
+    overflow: hidden
+    // z-index: 0
+
+    +size(100%)
+
+  &__bg
+    position: absolute
+    // z-index: -1
+
+    +size(100%)
+
+    +bp-min(768)
+      top: -10%
+      right: -10%
+      overflow: hidden
+
+      +size(704.5px)
+
+      border-radius: 50px
+      transform: rotate(45deg)
+
+    +bp-min(1024)
+      +size(713.5px)
+
+    +bp-min(1441)
+      top: auto
+      right: auto
+
+      +size(100%)
+
+      border-radius: 0
+
+      transform: rotate(0)
+
+    &::before
+      content: ""
+      position: absolute
+
+      +size(100%)
+
+      +bgi("../img/hero/index__hero_640.jpg", "../img/hero/index__hero_1280.jpg")
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: 50%
+
+      +bp-minmax(768, 1440)
+        top: 14%
+        left: -5%
+
+        +size(110%)
+        transform: rotate(-45deg)
+        border-radius: 50px
+
+      +bp-min(1024)
+        +bgi("../img/hero/index__hero_1280.jpg", "../img/hero/index__hero_2560.jpg")
+
+      +bp-min(1920)
+        +bgi("../img/hero/index__hero_2560.jpg", "../img/hero/index__hero_3840.jpg")
+
+    &::after
+      content: ""
+      position: absolute
+
+      +size(100%)
+
+      background-color: rgba(#000, .5)
+
+      +bp-minmax(768, 1440)
+        display: none
+
+  // Контент
+  &__container
+    z-index: 2
+
+    flex-grow: 1
+    align-self: center
+
+    &--index
+
+      +bp-min(768)
+        align-self: flex-end
+        margin-bottom: 10%
+
+      +bp-minmax(768, 1440)
+        color: #333
+
+        .hero__title
+          +text-gradient()
+
+  &__title-wrapper
+    max-width: 510px
+    +mg(auto)
+
+  &__title
+    max-width: 510px
+    display: block
+    margin-bottom: 15px
+
+    font-size: $font-size-mobile--h1
+    font-family: $font-family--headings
+    font-weight: 700
+    line-height: 1.15
+    color: currentColor
+
+    &--throwback
+      max-width: none
+
+      text-align: center
+
+    &--dream-team
+      +mg-bottom(40px)
+
+  br
+    display: none
+
+    +bp-min(600)
+      display: block
+
+  &__description
+    margin-bottom: 40px
+
+    font-size: 18px
+    font-weight: 700
+
+    &--throwback
+      font-size: 12px
+      font-weight: 400
+      text-align: center
+
+    &--dream-team
+      display: inline-flex
+      padding: 2px 12px 3px
+      margin-bottom: 30px
+
+      font-size: 14px
+      font-weight: 700
+      white-space: nowrap
+
+      background-image: $gradient--dream-team
+      border-radius: 4px
+
+  &__button
+
+    &:not(:last-child)
+      margin-bottom: 30px
+
+  a.hero__button
+    font-size: 14px
+
+  &__video-wrapper
+    max-width: 800px
+    +mg(auto)
+
+    +bp-min(1440)
+      max-width: 70% // (?)
+
+  &__video
+    position: relative
+
+    padding-bottom: 56.25% // Comes from the aspect ratio 16:9. 9/16x100 = 56.25
+
+    overflow: hidden
+
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+
+      height: 100%
+      width: 100%
+
+  &--index
+
+    +bp-minmax(768, 1440)
+      background-color: #fff
+
+  &--throwback
+    // Отбивка от фикcированного хедера
+    padding-top: 60px
+
+  &--dream-team
+    position: relative
+
+    margin-bottom: 0
+
+    text-align: center
+
+    background-size: cover
+    background-repeat: no-repeat
+
+    overflow: hidden
+
+    &::after
+      content: ""
+      position: absolute
+      left: -1px // закрыть линию
+      bottom: -2px // закрыть линию
+
+      +size(101%, 100%) // закрыть линию
+
+      background-image: url(../img/hero/dream-team__hero-decoration.svg)
+      background-position: 50% 100%
+      background-size: contain
+      background-repeat: no-repeat
+
+      +bp-min(1024)
+        bottom: -5vh // чуть ниже, чтобы дать больше картинки на больших экранах
+
+    +bp-max(479)
+
+      &.lazyloaded
+        +bgi("../img/hero/dream-team__hero-mobile_480.jpg", "../img/hero/dream-team__hero-mobile_960.jpg")
+
+    +bp-min(480)
+      text-align: left
+
+      &.lazyloaded
+        +bgi("../img/hero/dream-team__hero-full_960.jpg", "../img/hero/dream-team__hero-full_1536.jpg")
+        background-position: 70% 0%
+
+      .hero__button
+        +mg(0)
+
+    +bp-min(1280)
+
+      &.lazyloaded
+        +bgi("../img/hero/dream-team__hero-full_1440.jpg", "../img/hero/dream-team__hero-full_2880.jpg")
+
+    // Порадуем Full-HD элиту
+    +bp-min(1440)
+
+      &.lazyloaded
+        +bgi("../img/hero/dream-team__hero-full_2880.jpg", "../img/hero/dream-team__hero-full_2880.jpg")
+
+
+    .hero__button
+      +mg(auto)

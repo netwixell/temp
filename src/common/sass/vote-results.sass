@@ -1,0 +1,87 @@
+.vote-results
+  // Отбивка от фикcированного хедера
+  padding-top: 60px + 40px
+  +mg-section()
+
+  &__wrapper
+
+    &--header
+      +divider()
+      max-width: 600px // по ширине 2 карточек (из голосования)
+      margin-bottom: 30px
+
+    &--qualifying
+      +mg-bottom(62px)
+
+  &__title
+    +text-gradient($gradient--dream-team)
+
+  &__summary
+    margin-bottom: 30px
+
+    font-size: 24px
+    font-weight: 700
+    text-align: left
+
+  &__thead
+    display: block
+    margin-bottom: 22px
+
+    font-size: 18px
+    font-weight: 700
+    text-align: left
+
+    &--outer
+      font-size: 24px
+      margin-bottom: 40px
+
+      +bp-min(1024)
+        margin-bottom: 40px
+
+  &__tbody
+    display: block
+    +mg-bottom(40px)
+
+    +bp-min(1024)
+      +mg-bottom(22px)
+
+  &__tfoot
+    +break-out--before()
+
+    display: block
+    padding-top: 17px
+    padding-bottom: 18px
+    margin-bottom: 20px
+
+    font-size: 18px
+    font-weight: 700
+    text-align: left
+
+  &__num
+    text-align: right
+
+  &__tr
+    display: grid
+    grid-template-columns: 1fr minmax(1rem, auto)
+    +mg-bottom(8px)
+
+    &--inner
+      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr))
+      grid-column-gap: 10%
+      grid-row-gap: 40px
+
+    &--outer
+      grid-template-columns: minmax(auto, max-content) minmax(auto, max-content)
+      grid-column-gap: .3em
+      align-items: center
+
+    &--judge-name
+      font-size: 14px
+      font-weight: 700
+      text-align: left
+
+      &:not(:first-child)
+        margin-top: 28px
+
+  table
+    width: 100%

@@ -1,0 +1,135 @@
+- var file= "resources/views/pug/pages/schedule/schedule__schedule.json";
+- var schedule= JSON.parse(fs.readFileSync(file));
+
+mixin img(icon)
+  img.event__img(src="../img/partners/"+icon+".svg", width="120", alt=icon)
+
+section.schedule
+  .schedule__container.container
+    h1.schedule__title Программа
+
+    //- Табы с днями-датами
+    ol.daylist.tabs(data-tabs).schedule__daylist
+      each datetime in schedule.datetime
+        li.daylist__day-wrapper(class= datetime.class)
+          a.daylist__day(href= "#" + datetime.href, class= datetime.class, data-tab, data-scroll-ignore, title= datetime.title)
+            time(datetime= datetime.ISOdate)= datetime.date
+
+    //- Контент табов
+    .schedule__wrapper(data-tabs-content)
+
+      //- Список потоков
+      each datetime in schedule.datetime
+        .schedule__inner.tabs-pane(class= datetime.class, id= datetime.href, data-tabs-pane)
+          ul.flowlist.schedule__flowlist
+            each flow in datetime.flow
+              li.flowlist__flow-wrapper
+                a.flowlist__flow(href= "#" + flow.href)
+                  span= flow.title
+
+          ol.schedule__list
+            li
+              //- Все ивенты потоков
+              each flow in datetime.flow
+                if (flow.type== "no-title")
+                  ol.eventlist.schedule__eventlist(id= flow.href)
+                    //- Ивенты отдельного потока
+                    each event in flow.content
+                      if (event.type== "logo" && !event.lector)
+                        li.event.eventlist__event(class= event.class)
+                          ol.event__timelist
+                            li
+                              time.event__time.event__time--start= event.timeStart
+                            li
+                              time.event__time.event__time--end= event.timeEnd
+                          .event__about
+                            .event__text-wrapper
+                              h3.event__title= event.title
+                              p.event__description= event.text
+                            .event__meta-wrapper
+                              .event__logo
+                                +img(event.img)
+                      else if (event.type== "badge")
+                        li.event.eventlist__event(class= event.class)
+                          ol.event__timelist
+                            li
+                              time.event__time.event__time--start= event.timeStart
+                            li
+                              time.event__time.event__time--end= event.timeEnd
+                          .event__about
+                            .event__text-wrapper
+                              h3.event__title= event.title
+                              span.event__badge= event.badge
+                              p.event__description= event.text
+                              strong.event__lector= event.lector
+                            .event__meta-wrapper
+                      else
+                        li.event.eventlist__event(class= event.class)
+                          ol.event__timelist
+                            li
+                              time.event__time.event__time--start= event.timeStart
+                            li
+                              time.event__time.event__time--end= event.timeEnd
+                          .event__about
+                            .event__text-wrapper
+                              h3.event__title= event.title
+                              p.event__description= event.text
+                              strong.event__lector= event.lector
+
+                else
+                  ol.eventlist.schedule__eventlist(id= flow.href)
+                    h2.eventlist__title= flow.title
+                    //- Ивенты отдельного потока
+                    each event in flow.content
+                      if (event.type== "logo" && !event.lector)
+                        li.event.eventlist__event(class= event.class)
+                          ol.event__timelist
+                            li
+                              time.event__time.event__time--start= event.timeStart
+                            li
+                              time.event__time.event__time--end= event.timeEnd
+                          .event__about
+                            .event__text-wrapper
+                              h3.event__title= event.title
+                              p.event__description= event.text
+                            .event__meta-wrapper
+                              .event__logo
+                                +img(event.img)
+                      else if (event.type== "badge")
+                        li.event.eventlist__event(class= event.class)
+                          ol.event__timelist
+                            li
+                              time.event__time.event__time--start= event.timeStart
+                            li
+                              time.event__time.event__time--end= event.timeEnd
+                          .event__about
+                            .event__text-wrapper
+                              h3.event__title= event.title
+                              span.event__badge= event.badge
+                              p.event__description= event.text
+                              strong.event__lector= event.lector
+                      else if (event.type== "logo" && !event.text)
+                        li.event.eventlist__event(class= event.class)
+                          ol.event__timelist
+                            li
+                              time.event__time.event__time--start= event.timeStart
+                            li
+                              time.event__time.event__time--end= event.timeEnd
+                          .event__about
+                            .event__text-wrapper
+                              h3.event__title= event.title
+                              strong.event__lector= event.lector
+                            .event__meta-wrapper
+                              .event__logo
+                                +img(event.img)
+                      else
+                        li.event.eventlist__event(class= event.class)
+                          ol.event__timelist
+                            li
+                              time.event__time.event__time--start= event.timeStart
+                            li
+                              time.event__time.event__time--end= event.timeEnd
+                          .event__about
+                            .event__text-wrapper
+                              h3.event__title= event.title
+                              strong.event__lector= event.lector

@@ -1,0 +1,235 @@
+.form
+  z-index: 1
+
+  max-width: 300px
+  width: 100%
+
+  color: $text-color
+
+  background-color: #fff
+
+  // TODO: Сделать плавное исчезание
+  &__success
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 10
+
+    +size(100%)
+    +flex-center()
+    // display: none
+
+    background-color: #fff
+    border-radius: 5px // Для формы на главной
+
+    font-size: 18px
+    font-weight: 700
+
+    opacity: 0
+    visibility: hidden
+
+    +trs(opacity)
+
+  &__line
+    margin-bottom: 20px
+
+    &:last-of-type
+      margin-bottom: 30px
+
+    // Красная ошибка
+    &--danger
+
+      .form__input
+        margin-bottom: 5px
+
+        border: 1px solid $accent--hover
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .1)
+
+        +trs(border)
+
+      .form__mistake
+        color: $accent--hover
+
+    // Оранжевая ошибка
+    &--warning
+
+      .form__input
+        margin-bottom: 5px
+
+        border: 1px solid #ffaa47
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .1)
+
+        +trs(border)
+
+      .form__mistake
+        color: #ffaa47
+
+    // Подсказка
+    &--hint
+
+      .form__input
+        margin-bottom: 5px
+
+        border: 1px solid #00c1ff
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .1)
+
+        +trs(border)
+
+      .form__mistake
+        color: #00c1ff
+
+  &__label
+
+    &--promo-text
+      position: relative
+
+      &::after
+        content: "-"
+        position: absolute
+        top: 50%
+        right: 0
+
+        display: inline-block
+
+        font-size: 14px
+        color: $text-color--placeholder
+
+    &--promo-num
+      float: right
+
+    &--agreement
+      position: relative
+
+      display: grid
+      grid-template-columns: 2em 1fr
+
+      user-select: none
+      cursor: pointer
+
+  &__input,
+  &__textarea
+    // display: inline-block
+    width: 100%
+    padding: 10px
+
+    border: 1px solid $bd-color
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1)
+    border-radius: 5px
+
+    +trs(box-shadow)
+
+    &:hover,
+    &:focus
+      box-shadow: 0 6px 20px rgba(0, 0, 0, .1)
+      outline: none
+
+    // Когда невалидное заполненное поле теряет фокус, будем рисовать ему красный бордер
+    // &:invalid:not(:placeholder-shown):not(:focus)
+    //   border: 1px solid $accent--hover
+    //   box-shadow: 0 6px 20px rgba(0, 0, 0, .1)
+
+    //   +trs(border)
+
+  &__input
+
+    &--promo-text
+      width: 220px
+      margin-right: 22px + 2.15px // чтобы «-» был по-центру (4.3 длина «-»)
+
+    &--promo-num
+      width: 36px
+
+      // Скрываем ненужные UI-элементы на FF
+      -moz-appearance: textfield
+
+      // Скрываем ненужные UI-элементы у прочих браузеров
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button
+        -webkit-appearance: none
+
+    &--checkbox
+
+      &:checked ~ .form__checkmark::before
+        background-color: #bdbdbd
+
+      &:checked ~ .form__checkmark::after
+        display: block
+
+  &__checkmark
+    grid-column: 2
+
+    &::before
+      content: ""
+      position: absolute
+      top: .3em
+      left: .3em
+
+      +size(1em)
+      display: block
+
+      border: 1px solid #bdbdbd
+      border-radius: 2px
+
+    &::after
+      content: ""
+      position: absolute
+      top: .3em
+      left: .55em
+
+      display: none
+      width: .5em
+      height: 0.8em
+      border: solid white
+      border-width: 0 2px 2px 0
+      transform: rotate(45deg)
+
+    &:hover,
+    &:focus
+      &::before
+        background-color: rgba(#bdbdbd, .5)
+
+  &__textarea
+    line-height: $line-height
+
+  ::placeholder
+    color: $text-color--placeholder
+
+  &__link
+    color: inherit
+    font-weight: inherit
+
+  &--molfar
+    position: absolute
+
+    padding: 30px 10px 23px
+
+    box-shadow: 0 5px 25px rgba(79, 79, 79, .15)
+    border-radius: 5px
+
+  &--dream-team
+    position: absolute
+
+    padding: 30px 10px 23px
+
+    box-shadow: 0 5px 25px rgba(79, 79, 79, .15)
+    border-radius: 5px
+
+  &--success
+
+    .form__success
+      visibility: visible
+
+      opacity: 1
+
+  &--buying
+    +mg(auto)
+    margin-bottom: 0
+
+    &:not(:last-child)
+      margin-bottom: 40px
+
+    +bp-min(768)
+      +mg(0)
+
+      &:not(:last-child)
+        +mg(20px, 60px) // 20 слева, чтобы сбалансировать

@@ -1,0 +1,65 @@
+.steps
+  display: flex
+  justify-content: space-between
+
+  text-align: center
+  font-style: italic
+
+  &__step
+    position: relative
+    color: $accent--throwback
+
+    // Эмуляция цвета $text-color--inactive
+    filter: contrast(0%) brightness(145%)
+
+    width: 100%
+
+    // Ромбик
+    &::before
+      content: ""
+
+      +size(12px)
+      display: block
+      +mg(auto)
+      margin-bottom: 5px
+
+      border-radius: 1px
+      transform: matrix(.71, .71, -.71, .71, 0, 0)
+      background-image: $gradient
+
+    // Линия
+    &:not(:last-child)::after
+      content: ""
+      position: absolute
+      top: 0 + 6px // половина высоты ромба
+      left: 50%
+      z-index: -1
+
+      width: 100%
+      height: 1px
+
+    &::after
+      background-image: $gradient--grey
+      background-size: 100% 100%
+      filter: contrast(0%) brightness(145%)
+
+    &--current
+      animation: current-step 1s ease-out forwards
+
+      &::before
+        animation: current-step-before 1s ease-out forwards
+
+      &::after
+        animation: current-step-after 1s ease-out 1s forwards
+
+    &--active
+      filter: contrast(100%) brightness(100%)
+
+      &::before
+        box-shadow: 0 5px 10px rgba(235, 87, 87, .65)
+        filter: contrast(100%) brightness(100%)
+
+      &::after
+        filter: contrast(100%) brightness(100%)
+
+        animation: active-step-after 1s ease-out forwards

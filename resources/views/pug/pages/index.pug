@@ -1,0 +1,27 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Molfar Beauty Forum"
+  - var description = "Главная бьюти-конференция в Украине"
+  - var ogImage = "/img/og-image.jpg"
+  - var ogImageSecure = "/img/og-image.jpg"
+  - var pageModifier = "page--index"
+  - var current_url = "/"
+
+block content
+  include ../modules/announcement
+  include index/index__hero
+  include index/index__quote-1
+  include index/index__speakers
+  include ../modules/commercial
+  include index/index__guests
+  include index/index__quote-2
+  include index/index__expectations
+  include index/index__dt-promo
+  include ../modules/commercial
+  include index/index__tickets
+  include index/index__partners
+  include index/index__questions
+
+block script
+  script(defer src="/js/index.min.js")

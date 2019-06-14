@@ -1,0 +1,26 @@
+extends ../layouts/main
+
+block variables
+  - var title = "Dream Team — Molfar Beauty Forum"
+  - var description = "Профессиональный командный конкурс бьюти-индустрии. Командные состязания с главным призом 100 000 гривен"
+  - var ogImage = "/img/og-image--dream-team.jpg"
+  - var ogImageSecure = "/img/og-image--dream-team.jpg"
+  - var pageModifier = "page--dream-team"
+  - var current_url = "/dream-team.html"
+
+block content
+  include dream-team/dream-team__hero
+  include dream-team/dream-team__about
+  include dream-team/dream-team__theme
+  include dream-team/dream-team__last-year-winner
+  include dream-team/dream-team__prize
+  include ../modules/commercial
+  include dream-team/dream-team__how-it-works
+  include dream-team/dream-team__judges
+  include ../modules/commercial
+  include dream-team/dream-team__sponsors
+  include dream-team/dream-team__registration
+  include dream-team/dream-team__registred
+
+block script
+  script(defer src="/js/dream-team.min.js")

@@ -1,0 +1,17 @@
+.activities-parallax
+
+  &__layer
+
+    &--last
+
+      +bp-min(1025)
+
+        &::after
+          content: ""
+          position: absolute
+          left: 0
+          top: 99%
+
+          +size(100%, 50%)
+
+          background-color: #fff

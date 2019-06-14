@@ -1,0 +1,109 @@
+mixin article(h1, published, publishedDatetime, text, h2, textLi, textQuote, caption, video)
+  article.article
+    .article__parallax
+      .article__img-wrapper.article__img-wrapper--outer
+        //- шаги srcset:
+        //- 600
+        //- 900
+        //- 1200
+        //- 1500
+        //- 1800
+        img.article__img(
+          srcset="./img/lectors/baumann_580.jpg 600w, ./img/lectors/baumann_870.jpg 900w ./img/lectors/baumann_870.jpg 1200w ./img/lectors/baumann_870.jpg 1500w ./img/lectors/baumann_870.jpg 1800w",
+          src="./img/lectors/baumann_580.jpg",
+          alt=h1)
+    .container.article__container
+      .article__inner.article__inner--content
+        h1.article__title.article__title--h1= h1
+        time.article__published(datetime=publishedDatetime)= published
+
+        .article__about
+          p.article__text= text
+
+          h2.article__title.article__title--h2= h2
+
+          ol.article__ordered-list
+            li
+              p.article__text= textLi
+            li
+              p.article__text= textLi
+            li
+              p.article__text= textLi
+
+          h2.article__title.article__title--h2= h2
+
+          ul.article__unordered-list
+            li
+              p.article__text= textLi
+            li
+              p.article__text= textLi
+            li
+              p.article__text= textLi
+
+          blockquote.article__quote
+            p.article__text= textQuote
+
+          figure.article__img-wrapper.article__img-wrapper--inner.loading
+            //- шаги srcset:
+            //- 600
+            //- 900
+            //- 1200
+            //- 1500
+            //- 1800
+            img.article__img.lazyload(
+              data-srcset="./img/lectors/svyshuk_580.jpg 600w, ./img/lectors/svyshuk_870.jpg 900w ./img/lectors/svyshuk_870.jpg 1200w ./img/lectors/svyshuk_870.jpg 1500w ./img/lectors/svyshuk_870.jpg 1800w",
+              data-src="./img/lectors/svyshuk_580.jpg",
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+              alt=caption)
+            figcaption.article__img-caption= caption
+
+          p.article__text= text
+
+          figure.article__img-wrapper.article__img-wrapper--video.loading
+            iframe.article__img.lazyload(
+              data-src=video,
+              allowfullscreen)
+
+          p.article__text= text
+
+        ul.likely
+          li.facebook(tabindex="0" role="link" aria-label="Share on Facebook") Поделиться
+          li.twitter(tabindex="0" role="link" aria-label="Tweet on Twitter") Твитнуть
+          li.telegram(tabindex="0" role="link" aria-label="Send on Telegram") Отправить
+
+      .article__inner.article__inner--likes.likes
+        p.likes__counter-wrapper
+          b.likes__counter.likes__counter--total 12
+
+          b.likes__text реакций
+        ul.likes__list
+          li.likes__item-wrapper
+            button.likes__item.likes__item--love.likes__item--active(href="#")
+              span.likes__text Восхитительно
+              span.likes__counter.likes__counter--love 2
+          li.likes__item-wrapper
+            button.likes__item.likes__item--funny(href="#")
+              span.likes__text Ха-ха!
+              span.likes__counter.likes__counter--funny 4
+          li.likes__item-wrapper
+            button.likes__item.likes__item--wow(href="#")
+              span.likes__text Ух ты!
+              span.likes__counter.likes__counter--wow 6
+          li.likes__item-wrapper
+            button.likes__item.likes__item--angry(href="#")
+              span.likes__text Возмутительно
+              //- span.likes__counter.likes__counter--angry
+
+      .article__inner.article__inner--comments
+
+
++article(
+  "Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Несколько взгляд пунктуация он над.",
+  "15 октября, 2018",
+  "2018-10-15 19:00",
+  "Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Речью жизни пустился наш маленький всемогущая переписывается необходимыми большой, рукописи страна, свой власти! Напоивший необходимыми продолжил решила букв алфавит коварных, реторический что раз образ заголовок рукопись наш всеми диких курсивных то деревни! Знаках инициал гор решила мир возвращайся единственное, всемогущая путь жаренные lorem если собрал реторический города свой вершину напоивший подпоясал продолжил? Даже одна грамматики составитель запятых курсивных, пор буквенных сих всеми единственное если правилами о! Приставка, дал безорфографичный инициал о рукописи деревни домах родного lorem правилами но ipsum диких запятой выйти? Силуэт, журчит вопроса! Свое дорогу языкового подпоясал агентство.",
+  "Подзаголовок",
+  "Пункт меню нумерованного списка Далеко-далеко за словесными горами в стране.",
+  "Текст цитаты. Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Выйти последний ты себя дороге.",
+  "Подпись к изображению",
+  "https://www.youtube.com/embed/Rgox84KE7iY")

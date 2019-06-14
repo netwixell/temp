@@ -1,0 +1,122 @@
+.header
+  position: fixed
+  z-index: 11
+
+  width: 100%
+
+  font-size: 18px
+  color: #fff
+
+  background-image: linear-gradient(180deg, #ff6644 0%, #c5001e 100%)
+  transform: translateY(-100%)
+
+  +trs(background-color, .5s)
+
+  +bp-min(768)
+    color: $accent
+
+    background-image: none
+    transform: translateY(0)
+
+  .icon-molfar
+    +size(121.67px, 30px)
+
+    fill: $accent
+
+    +bp-min(768)
+      fill: $accent
+
+  &__nav
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    height: 100vh
+    padding-top: 15px
+    padding-bottom: 100px
+
+    +bp-min(768)
+      justify-content: center
+      flex-direction: row
+      // FIXME: Костыль. Импортант помогает перебить лишние js-стили
+      height: 60px !important
+      padding-top: 0
+      padding-bottom: 0
+
+  &__list
+    display: block
+
+    text-align: center
+
+    +bp-min(768)
+      display: flex
+
+    &--links
+      margin-bottom: auto
+
+      +bp-min(768)
+        // margin-right: 135px
+        margin-bottom: 0
+
+      // Стилизация линка на текущую страницу
+      .header__link
+
+        &:not([href])
+          text-decoration: line-through
+
+          cursor: default
+
+  &__link-wrapper
+
+    &:not(:last-child)
+      margin-bottom: 40px
+
+      +bp-min(768)
+        margin-right: 35px
+        margin-bottom: 0
+
+  &__link
+    +unlink()
+    font-size: 12px
+    font-weight: 400
+    color: inherit
+
+    &--logo
+      position: fixed
+      top: calc(100vh + 15px)
+
+      +unfont()
+
+      +bp-min(768)
+        position: static
+        top: auto
+
+        margin-right: auto
+
+    &--lang
+      text-transform: uppercase
+
+    &--mobile
+
+      +bp-min(768)
+        display: none
+
+  &--mobile
+    transform: translateY(0%)
+
+    +trs(transform, .25s, ease-in)
+
+    .header__link
+
+      &--logo
+        position: static
+        top: auto
+
+        margin-bottom: auto
+
+    .icon-molfar
+      fill: #fff
+
+  // модификатор, который делает подложку полупрозрачной
+  &--substrate
+    background-color: rgba(#fff, .95)

@@ -1,0 +1,38 @@
+<svg width="1024" height="264" viewBox="0 0 1024 264" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_df)">
+<rect width="64.6413" height="64.6413" rx="10" transform="translate(862.386 5.99707) scale(0.998728 1.00127) rotate(45)" fill="url(#paint0_linear)"/>
+</g>
+<g filter="url(#filter1_df)">
+<rect width="94.9867" height="94.9867" rx="10" transform="translate(95.6565 40.8662) scale(0.998868 1.00113) rotate(45)" fill="url(#paint1_linear)"/>
+</g>
+<defs>
+<filter id="filter0_df" x="810.873" y="0.14447" width="103.027" height="103.238" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="1" dy="2"/>
+<feGaussianBlur stdDeviation="2.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.894118 0 0 0 0 0.207843 0 0 0 0 0.196078 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+<feGaussianBlur stdDeviation="5" result="effect2_foregroundBlur"/>
+</filter>
+<filter id="filter1_df" x="22.7043" y="35.0131" width="145.904" height="146.19" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="1" dy="2"/>
+<feGaussianBlur stdDeviation="2.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.894118 0 0 0 0 0.207843 0 0 0 0 0.196078 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+<feGaussianBlur stdDeviation="5" result="effect2_foregroundBlur"/>
+</filter>
+<linearGradient id="paint0_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.85173 0.110765) scale(65.4496)">
+<stop stop-color="#FF6543"/>
+<stop offset="1" stop-color="#C6011E"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1.25157 0.162762) scale(96.1743)">
+<stop stop-color="#FF6543"/>
+<stop offset="1" stop-color="#C6011E"/>
+</linearGradient>
+</defs>
+</svg>

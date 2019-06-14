@@ -1,0 +1,75 @@
+.partners
+  +mg-section()
+
+  &__title
+    margin-bottom: 50px
+
+    text-align: center
+
+  &__list
+    display: grid
+    grid-template-columns: repeat(auto-fill, 160px)
+    grid-gap: 60px
+    align-items: center
+    justify-content: center
+
+    +mg-bottom(60px)
+
+  &__item
+    +unfont()
+
+    // Эмуляция цвета $text-color--inactive
+    filter: contrast(0%) brightness(100%)
+
+    &:hover
+      filter: contrast(0%) brightness(50%)
+
+    // Возможное улучшение UX
+    // &:hover,
+    // &:focus
+
+    //   &::after
+    //     content: attr(href)
+    //     position: absolute
+    //     bottom: -25px
+
+    //     display: block
+
+    //     font-size: 12px
+    //     color: rgba($text-color--inactive, .3)
+
+    &.loading
+      +img(160px, 100px)
+
+      &::before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        z-index: 1
+
+        width: 32px
+        height: 32px
+        margin-top: -16px
+        margin-left: -16px
+
+        border-radius: 32px
+
+        animation: scaleout 1.2s infinite ease-in-out
+
+        // Tweak as needed
+        mix-blend-mode: soft-light
+        background-color: rgba(0, 0, 0, .9)
+
+  &__more
+    display: block
+    +mg(auto)
+
+    font-style: italic
+    color: $text-color--inactive
+
+    +unbutton()
+
+    // После 768 мы хотим видеть всех сразу
+    +bp-min(768)
+      display: none

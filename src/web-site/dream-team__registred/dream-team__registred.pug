@@ -1,0 +1,48 @@
+mixin team(title, address, baige)
+  //- .team-list__item--inactive для серого цвета и потери порядкового номера команды
+  li.team-list__item(class!=attributes.li)
+    table.team-list__team-table.team-table
+      tbody.team-table__body
+        tr.team-table__title
+          th= title
+        tr.team-table__address
+          td= address
+        //- .team-table__badge--winner для золотого бейджа
+        tr.team-table__badge(class!=attributes.baige)
+          td= baige
+        tr.team-table__photo
+          td
+            a(href="", class="js-button-gallery") Фото
+            div(itemscope=true, itemtype="http://schema.org/ImageGallery", class="js-gallery", style="display:none")
+              figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                a(href="https://molfarforum.com/storage/thumbs/290x290/persons/September2018/ewvCdTQ2fiPqYd5W1YTJ.JPG", itemprop="contentUrl" data-srcset="https://molfarforum.com/storage/thumbs/290x290/persons/September2018/ewvCdTQ2fiPqYd5W1YTJ.JPG 300w, https://molfarforum.com/storage/thumbs/580x580/persons/September2018/ewvCdTQ2fiPqYd5W1YTJ.JPG 600w, https://molfarforum.com/storage/thumbs/870x870/persons/September2018/ewvCdTQ2fiPqYd5W1YTJ.JPG 900w")
+                  figcaption(itemprop="caption description")=title + " — " + address
+              figure(itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject")
+                a(href="https://molfarforum.com/storage/thumbs/290x290/persons/August2018/NKwqyS1r04rCup1tmsVG.jpg", itemprop="contentUrl" data-srcset="https://molfarforum.com/storage/thumbs/290x290/persons/August2018/NKwqyS1r04rCup1tmsVG.jpg 300w, https://molfarforum.com/storage/thumbs/580x580/persons/August2018/NKwqyS1r04rCup1tmsVG.jpg 600w, https://molfarforum.com/storage/thumbs/870x870/persons/August2018/NKwqyS1r04rCup1tmsVG.jpg 900w")
+                  figcaption(itemprop="caption description")=title + " — " + address
+        tr.team-table__results
+          td
+            a(href="") Результаты
+
+
+section.registred#registred
+  .registred__container.container
+    h2.registred__title Команды
+
+    ol.registred__list.team-list
+      +team("GRABCHUK beauty room", "Киев, Украина", "Финалист")
+      +team("Команда «Авантюристы»", "Киев, Украина", "Лучшая причёска")(baige="team-table__badge--winner")
+      +team("Команда «A»", "Киев, Украина", "Финалист")
+      +team("Команда «С очень длинным названием. Напрягает всех уже с самого начала»", "Киев, Украина", "Финалист")
+      +team("Команда «A»", "Киев, Украина", "Финалист")
+      +team("Команда «A»", "Киев, Украина", "Финалист")
+      +team("Команда «A»", "Киев, Украина", "Финалист")
+      +team("Команда «A»", "Киев, Украина", "Финалист")
+      +team("Команда «A»", "Киев, Украина", "Финалист")
+      +team("Команда «A»", "Киев, Украина", "Финалист")
+      +team("Команда «A»", "Киев, Украина", "Финалист")
+      +team("Штраф-команда", "Киев, Украина")(li="team-list__item--inactive")
+      +team("Команда «A»", "Киев, Украина")
+
+    a.registred__button(href="").button.button--unfilled-blue
+      span К голосованию

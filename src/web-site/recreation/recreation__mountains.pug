@@ -1,0 +1,21 @@
+section.activities.activities--mountains.activities-parallax
+  .activities__bg.activities__bg--mountains.lazyload
+  //- .activities__bg.activities__bg--bottom.activities-parallax__layer.activities-parallax__layer--last(data-rellax-speed="4", style="background-image: url(../img/recreation/mountain.png);")
+
+  picture.activities__img-wrapper.activities-parallax__layer.activities-parallax__layer--last.loading(data-rellax-speed="4")
+    //- webp images
+    source(
+      type="image/webp",
+      data-srcset="../img/recreation/mountain_1080.webp 1080w, ../img/recreation/mountain_1440.webp 1440w, ../img/recreation/mountain_1920.webp 1920w")
+
+    //- png images
+    source(
+      type="image/png",
+      data-srcset="../img/recreation/mountain_1080.png 1080w, ../img/recreation/mountain_1440.png 1440w, ../img/recreation/mountain_1920.png 1920w")
+    img.activities__img.lazyload(data-src="../img/recreation/mountain_1080.png")
+
+  .container.activities__container
+
+    .activities__wrapper
+      h2.activities__title Покорите вершины
+      p.activities__description На территории Форума будут работать два подъёмника с которых открываются изумительные виды

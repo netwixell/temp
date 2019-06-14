@@ -1,0 +1,165 @@
+.article
+  // 60px — Отбивка от фикcированного хедера
+  padding-top: 60px
+
+  &__container
+    position: relative
+
+    padding-top: 30px
+
+    background-color: #fff
+    box-shadow: 0 -1px 20px rgba(#000, .05)
+
+    +bp-min(1440)
+      max-width: unset
+
+  &__inner
+    max-width: 600px
+    width: 100%
+    +mg(auto)
+
+    &--content
+      padding-bottom: 40px
+      margin-bottom: 50px
+
+      border-bottom: 1px solid rgba(#333, .25)
+
+    &--likes
+      padding-bottom: 60px
+
+  &__parallax
+    padding-bottom: 62.5%
+
+    +bp-min(1024)
+      padding-bottom: 30%
+
+  &__img-wrapper
+    +mg-bottom(30px)
+
+    &--outer
+      +img(320px,200px)
+      position: fixed
+
+      width: 100%
+
+      & > img
+        z-index: -1
+
+      +bp-min(1024)
+        +img(1000px, 300px)
+        position: fixed
+
+        width: 100%
+
+        & > img
+          z-index: -1
+
+  &__img-caption
+    font-style: italic
+    text-align: center
+    color: $text-color--inactive
+
+  &__title
+    line-height: 1.35
+
+    &--h1
+      padding-bottom: 10px
+      +mg-bottom(30px)
+
+      font-size: 24px
+
+      border-bottom: 1px solid rgba(#333, .25)
+
+    &--h2
+      +mg-bottom(20px)
+
+      font-size: 18px
+
+  &__published
+    display: inline-block
+    +mg-bottom(30px)
+
+    color: $text-color--inactive
+    font-style: italic
+
+  &__about
+    +mg-bottom(60px)
+
+    line-height: 1.8
+
+  &__text
+    +mg-bottom(30px)
+
+    font-size: 16px
+
+  &__ordered-list
+    counter-reset: ordered-list
+
+    +mg-bottom(30px)
+
+    +bp-min(768)
+      margin-left: -40px
+
+    li
+      display: grid
+      grid-template-columns: 20px 1fr
+      grid-column-gap: 14px
+      +mg-bottom(10px)
+
+      &::before
+        content: counter(ordered-list)
+        counter-increment: ordered-list
+
+        justify-self: start
+        margin-top: 1em
+
+        font-size: 10px
+        line-height: 1
+        color: $text-color--placeholder
+
+        +bp-min(768)
+          justify-self: end
+
+      // Числа до 10 получают ноль (1 → 01, и т.д.)
+      &:nth-of-type(-n+9)::before
+        content: "0" counter(ordered-list)
+
+      +bp-min(768)
+        grid-column-gap: 20px
+
+  &__unordered-list
+    +mg-bottom(30px)
+
+    +bp-min(768)
+      margin-left: -32px
+
+    li
+      display: grid
+      grid-template-columns: 20px 1fr
+      grid-column-gap: 12px
+      align-items: baseline
+      +mg-bottom(10px)
+
+      &::before
+        content: ""
+
+        +size(4px)
+        margin-top: 16px - 2
+
+        background-color: $text-color--placeholder
+        border-radius: 50%
+
+  &__quote
+    +mg-bottom(30px)
+    +pd(30px)
+
+    font-style: italic
+    color: $text-color--inactive
+
+  b,
+  strong
+    font-weight: 700
+
+  a
+    color: inherit
+    font-weight: inherit

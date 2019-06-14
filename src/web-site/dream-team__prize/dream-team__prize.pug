@@ -1,0 +1,32 @@
+mixin prize(title, description, imgName)
+  li.prize__card.swiper-slide
+    .prize__img-wrapper.loading
+      img.prize__img.lazyload(
+        data-srcset="img/prize/"+imgName+"_360.jpg 360w, img/prize/"+imgName+"_720.jpg 720w, img/prize/"+imgName+"_1080.jpg 1080w",
+        data-src="img/prize/"+imgName+"_720.jpg",
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+        alt=title)
+    .prize__text-wrapper
+      p.prize__text
+        b.prize__subtitle= title
+      p.prize__text
+        em.prize__description.prize__description--italic= description
+
+
+section.prize
+  .prize__container.container
+    .prize__title-wrapper
+      h2.prize__title Призовой фонд
+      p.prize__description 5 призовых мест и поощрительные призы участникам, которые не пройдут отборочный этап
+
+    .prize__swiper-container.swiper-container
+      ul.prize__list.swiper-wrapper
+        +prize("Гран-при", "Кубок Dream Team и 100 000 гривен", "grand-prix")
+        +prize("Номинация «Лучшая причёска»", "Сертификат на 25 000 гривен на продукцию от Lakme™", "hair")
+        +prize("Номинация «Лучший макияж»", "Сертификат на 25 000 гривен на продукцию от Elan™", "makeup")
+        +prize("Номинация «Лучший маникюр»", "Сертификат на 25 000 гривен на продукцию от Adore™", "manicure")
+        +prize("Номинация «People`s Choice»", "Сертификат на 25 000 гривен на продукцию от Nouvelle™", "people`s-choice")
+
+
+      button.prize__button.prize__button--prev.swiper-button-prev
+      button.prize__button.prize__button--next.swiper-button-next

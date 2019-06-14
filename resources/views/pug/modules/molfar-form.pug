@@ -1,0 +1,28 @@
+form.form.form--molfar(data-aos="fade-up", data-aos-offset="200")
+  .form__success
+    span Отправленно!
+  p.form__line
+    label.form__label
+      | Имя
+      input.form__input(type="text", placeholder="Анастасия Ресничкина", required)
+      //- Здесь могла бы быть Ваша ошибка
+      //- span.form__mistake Текст ошибки
+  p.form__line
+    label.form__label
+      | Телефон
+      input.form__input#tel(type="tel", placeholder="+380 (00) 000 00 00", required)
+      //- Здесь могла бы быть Ваша ошибка
+      //- span.form__mistake Текст ошибки
+  p.form__line
+    label.form__label
+      | Е-почта
+      input.form__input(type="email", placeholder="anastasia@mail.com", required)
+      //- Здесь могла бы быть Ваша ошибка
+      //- span.form__mistake Текст ошибки
+  p.form__line
+    label.form__label
+      | Ваш вопрос
+      textarea.form__textarea#textarea(rows="5", maxlength="65535", placeholder="Я могу купить билеты всему салону?")
+
+  button.form__button.button.button--unfilled
+    span Отправить

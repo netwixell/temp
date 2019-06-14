@@ -1,0 +1,146 @@
+.ticket
+  position: relative
+
+  max-width: 300px
+  width: 100%
+  +pd(13px)
+  padding-top: 20px
+  padding-bottom: 35px
+  +mg(auto)
+
+  background-color: #fff
+  border-radius: 10px
+  box-shadow: 0 8px 37px rgba(202, 202, 202, .42)
+
+  overflow: hidden
+
+  &__title-wrapper
+    position: relative
+
+    width: 95% // чтобы разместить точки как в макете
+    padding-bottom: 15px
+    +mg(auto)
+    margin-bottom: calc(50px - 15px)
+
+    background-image: url(../img/dot.svg)
+    background-repeat: repeat-x
+    background-position: 100% 100%
+    background-size: 15px 5px
+
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+
+      +size(20px)
+
+      background: $bg-color--lightest
+      border-radius: 50%
+
+    // 13 — поля билета
+    // 10 — радиус круга
+    // 2.5% — половина от зазора в ширине обёртки
+    &::before
+      left: calc(-13px - 10px - 2.5%)
+      bottom: -7.5px
+
+    &::after
+      right: calc(-13px - 10px - 2.5%)
+      bottom: -7.5px
+
+
+  &__title
+    +text-gradient()
+
+  &__price
+    +text-gradient()
+
+    font-size: 36px
+    font-weight: 900
+    line-height: 1.15
+
+    &--up
+      font-size: 12px
+      font-weight: 400
+      color: $bg-color--inactive
+      line-height: 1.6
+
+      background: #fff
+      -webkit-text-fill-color: inherit
+      -webkit-background-clip: text
+
+    &--white
+      color: #fff
+
+      background: #fff
+      -webkit-text-fill-color: transparent
+      -webkit-background-clip: text
+
+    &--solid
+      font-size: 28px
+      color: inherit
+
+      background: #fff
+      -webkit-text-fill-color: inherit
+      -webkit-background-clip: text
+
+    &--final
+      font-size: 24px
+      color: inherit
+
+      background: #fff
+      -webkit-text-fill-color: inherit
+      -webkit-background-clip: text
+
+  &__offers
+    margin-bottom: 30px
+
+    font-style: italic
+    font-weight: 400 // приняли решение уплотнить из-за рендеринга на Виндоус
+    color: $text-color--secondary
+    line-height: 1.15
+
+  &__offer
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+    &--total
+      font-style: italic
+
+  &__options
+    display: block
+
+    font-size: 18px
+    font-weight: 700
+    line-height: 1.15
+
+    &:not(:last-child)
+      margin-bottom: 25px
+
+  &__option
+    display: inline-block
+
+    &:not(:last-child)
+      margin-bottom: 25px
+
+  &__total
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+
+  &__button
+    max-width: 210px
+    flex-direction: column
+    padding-top: 5px
+    +mg(auto)
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+    span
+      font-size: 12px
+
+  &--center
+    text-align: center
