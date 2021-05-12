@@ -78,7 +78,7 @@
     "react-dom": "^16.7.0",
     "rellax": "^1.7.1",
     "svg4everybody": "^2.1.9",
-    "swiper": "^4.3.3",
+    "swiper": "^6.5.1",
     "smooth-scroll": "^14.2.0"
   },
   "dependencies": {
